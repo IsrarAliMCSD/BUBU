@@ -1,0 +1,26 @@
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\bin\Debug\BAL.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\bin\Debug\BAL.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\bin\Debug\DALDelegate.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\bin\Debug\DAOClassLib.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\bin\Debug\DAO.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\bin\Debug\EntityFramework.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\bin\Debug\DALDelegate.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\bin\Debug\DAOClassLib.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\bin\Debug\DAO.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\bin\Debug\EntityFramework.xml
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\obj\Debug\BAL.csprojResolveAssemblyReference.cache
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\obj\Debug\BAL.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\BAL\obj\Debug\BAL.pdb
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\bin\Debug\BAL.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\bin\Debug\BAL.pdb
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\bin\Debug\DALDelegate.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\bin\Debug\DAOClassLib.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\bin\Debug\DAO.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\bin\Debug\EntityFramework.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\bin\Debug\DALDelegate.pdb
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\bin\Debug\DAOClassLib.pdb
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\bin\Debug\DAO.pdb
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\bin\Debug\EntityFramework.xml
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\obj\Debug\BAL.csprojResolveAssemblyReference.cache
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\obj\Debug\BAL.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\BAL\obj\Debug\BAL.pdb

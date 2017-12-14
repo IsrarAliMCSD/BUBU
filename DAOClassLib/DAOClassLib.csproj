@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{75D9FDAE-C627-4554-B610-8FDC04A3C164}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAOClassLib</RootNamespace>
+    <AssemblyName>DAOClassLib</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="EF\AccountActivation.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\AccountType.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\BusienssClubNewsInfo.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\BusinessActivityMessageType.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\BusinessClub.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\BusinessClubActivity.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\BusinessClubActivityComment.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\BusinessClubActivityDetail.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\BusinessClubJoinRequest.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\BusinessClubMember.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Commencement.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CompanyAbout.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\CompanyInformation.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Country.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\DocumentCategory.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\DocumentFormatAllow.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\DocumentUpload.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Domicile.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EmploymentType.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\EntityInformation.cs" />
+    <Compile Include="EF\Event.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Extent_BusinessClubJoinRequest.cs" />
+    <Compile Include="EF\Extent_VacancyApply.cs" />
+    <Compile Include="EF\formatAllow_old.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Hobby.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\JobType.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Language.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Level.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Qualification.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\QualificationCategory.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Reference.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Region.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Skill.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\sysdiagram.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\User.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\UserHobby.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\UserInbox.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\UserLanguage.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\UserMessageDetail.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\UserQualification.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\UserReference.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\UserSkill.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\UserWorkExperience.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Vacancy.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\VacancyApply.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\WorkExperience.cs">
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="MiscellenousOperation.cs" />
+    <Compile Include="EF\Bubu.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bubu.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Bubu.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bubu.tt</DependentUpon>
+    </Compile>
+    <Compile Include="EF\Bubu.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Bubu.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserSession.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EntityDeploy Include="EF\Bubu.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Bubu.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <None Include="EF\Bubu.edmx.diagram">
+      <DependentUpon>Bubu.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="EF\Bubu.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Bubu.edmx</DependentUpon>
+      <LastGenOutput>Bubu.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="EF\Bubu.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Bubu.edmx</DependentUpon>
+      <LastGenOutput>Bubu.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

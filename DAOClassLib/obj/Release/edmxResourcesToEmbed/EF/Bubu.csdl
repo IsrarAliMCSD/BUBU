@@ -1,0 +1,1345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BubuModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BubuEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="AccountActivations" EntityType="BubuModel.AccountActivation" />
+    <EntitySet Name="AccountTypes" EntityType="BubuModel.AccountType" />
+    <EntitySet Name="BusienssClubNewsInfoes" EntityType="BubuModel.BusienssClubNewsInfo" />
+    <EntitySet Name="BusinessActivityMessageTypes" EntityType="BubuModel.BusinessActivityMessageType" />
+    <EntitySet Name="BusinessClubs" EntityType="BubuModel.BusinessClub" />
+    <EntitySet Name="BusinessClubActivities" EntityType="BubuModel.BusinessClubActivity" />
+    <EntitySet Name="BusinessClubActivityComments" EntityType="BubuModel.BusinessClubActivityComment" />
+    <EntitySet Name="BusinessClubMembers" EntityType="BubuModel.BusinessClubMember" />
+    <EntitySet Name="Commencements" EntityType="BubuModel.Commencement" />
+    <EntitySet Name="CompanyAbouts" EntityType="BubuModel.CompanyAbout" />
+    <EntitySet Name="CompanyInformations" EntityType="BubuModel.CompanyInformation" />
+    <EntitySet Name="Countries" EntityType="BubuModel.Country" />
+    <EntitySet Name="DocumentCategories" EntityType="BubuModel.DocumentCategory" />
+    <EntitySet Name="DocumentFormatAllows" EntityType="BubuModel.DocumentFormatAllow" />
+    <EntitySet Name="DocumentUploads" EntityType="BubuModel.DocumentUpload" />
+    <EntitySet Name="Domiciles" EntityType="BubuModel.Domicile" />
+    <EntitySet Name="EmploymentTypes" EntityType="BubuModel.EmploymentType" />
+    <EntitySet Name="formatAllow_old" EntityType="BubuModel.formatAllow_old" />
+    <EntitySet Name="Hobbies" EntityType="BubuModel.Hobby" />
+    <EntitySet Name="JobTypes" EntityType="BubuModel.JobType" />
+    <EntitySet Name="Languages" EntityType="BubuModel.Language" />
+    <EntitySet Name="Levels" EntityType="BubuModel.Level" />
+    <EntitySet Name="Qualifications" EntityType="BubuModel.Qualification" />
+    <EntitySet Name="References" EntityType="BubuModel.Reference" />
+    <EntitySet Name="Regions" EntityType="BubuModel.Region" />
+    <EntitySet Name="Skills" EntityType="BubuModel.Skill" />
+    <EntitySet Name="sysdiagrams" EntityType="BubuModel.sysdiagram" />
+    <EntitySet Name="Users" EntityType="BubuModel.User" />
+    <EntitySet Name="UserHobbies" EntityType="BubuModel.UserHobby" />
+    <EntitySet Name="UserInboxes" EntityType="BubuModel.UserInbox" />
+    <EntitySet Name="UserLanguages" EntityType="BubuModel.UserLanguage" />
+    <EntitySet Name="UserQualifications" EntityType="BubuModel.UserQualification" />
+    <EntitySet Name="UserReferences" EntityType="BubuModel.UserReference" />
+    <EntitySet Name="UserSkills" EntityType="BubuModel.UserSkill" />
+    <EntitySet Name="UserWorkExperiences" EntityType="BubuModel.UserWorkExperience" />
+    <EntitySet Name="Vacancies" EntityType="BubuModel.Vacancy" />
+    <EntitySet Name="VacancyApplies" EntityType="BubuModel.VacancyApply" />
+    <EntitySet Name="WorkExperiences" EntityType="BubuModel.WorkExperience" />
+    <AssociationSet Name="FK_AccountActivation_User" Association="BubuModel.FK_AccountActivation_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="AccountActivation" EntitySet="AccountActivations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_AccountType" Association="BubuModel.FK_User_AccountType">
+      <End Role="AccountType" EntitySet="AccountTypes" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusienssClubNews_BusinessClub" Association="BubuModel.FK_BusienssClubNews_BusinessClub">
+      <End Role="BusinessClub" EntitySet="BusinessClubs" />
+      <End Role="BusienssClubNewsInfo" EntitySet="BusienssClubNewsInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusienssClubNews_User" Association="BubuModel.FK_BusienssClubNews_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="BusienssClubNewsInfo" EntitySet="BusienssClubNewsInfoes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubActivity_BusinessActivityMessageType" Association="BubuModel.FK_BusinessClubActivity_BusinessActivityMessageType">
+      <End Role="BusinessActivityMessageType" EntitySet="BusinessActivityMessageTypes" />
+      <End Role="BusinessClubActivity" EntitySet="BusinessClubActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClub_User" Association="BubuModel.FK_BusinessClub_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="BusinessClub" EntitySet="BusinessClubs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubActivity_BusinessClub" Association="BubuModel.FK_BusinessClubActivity_BusinessClub">
+      <End Role="BusinessClub" EntitySet="BusinessClubs" />
+      <End Role="BusinessClubActivity" EntitySet="BusinessClubActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubMember_BusinessClub" Association="BubuModel.FK_BusinessClubMember_BusinessClub">
+      <End Role="BusinessClub" EntitySet="BusinessClubs" />
+      <End Role="BusinessClubMember" EntitySet="BusinessClubMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubActivity_User" Association="BubuModel.FK_BusinessClubActivity_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="BusinessClubActivity" EntitySet="BusinessClubActivities" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubActivityComment_BusinessClubActivity" Association="BubuModel.FK_BusinessClubActivityComment_BusinessClubActivity">
+      <End Role="BusinessClubActivity" EntitySet="BusinessClubActivities" />
+      <End Role="BusinessClubActivityComment" EntitySet="BusinessClubActivityComments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubMember_User" Association="BubuModel.FK_BusinessClubMember_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="BusinessClubMember" EntitySet="BusinessClubMembers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Commencement" Association="BubuModel.FK_User_Commencement">
+      <End Role="Commencement" EntitySet="Commencements" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyAboutUs_CompanyInformation" Association="BubuModel.FK_CompanyAboutUs_CompanyInformation">
+      <End Role="CompanyInformation" EntitySet="CompanyInformations" />
+      <End Role="CompanyAbout" EntitySet="CompanyAbouts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyInformation_User" Association="BubuModel.FK_CompanyInformation_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="CompanyInformation" EntitySet="CompanyInformations" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vacancy_CompanyInformation" Association="BubuModel.FK_Vacancy_CompanyInformation">
+      <End Role="CompanyInformation" EntitySet="CompanyInformations" />
+      <End Role="Vacancy" EntitySet="Vacancies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Country" Association="BubuModel.FK_User_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserQualification_Country" Association="BubuModel.FK_UserQualification_Country">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="UserQualification" EntitySet="UserQualifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentFormatAllow_DocumentCategory" Association="BubuModel.FK_DocumentFormatAllow_DocumentCategory">
+      <End Role="DocumentCategory" EntitySet="DocumentCategories" />
+      <End Role="DocumentFormatAllow" EntitySet="DocumentFormatAllows" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentUpload_DocumentCategory" Association="BubuModel.FK_DocumentUpload_DocumentCategory">
+      <End Role="DocumentCategory" EntitySet="DocumentCategories" />
+      <End Role="DocumentUpload" EntitySet="DocumentUploads" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentUpload_User" Association="BubuModel.FK_DocumentUpload_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="DocumentUpload" EntitySet="DocumentUploads" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Domicile" Association="BubuModel.FK_User_Domicile">
+      <End Role="Domicile" EntitySet="Domiciles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserHobby_Hobby" Association="BubuModel.FK_UserHobby_Hobby">
+      <End Role="Hobby" EntitySet="Hobbies" />
+      <End Role="UserHobby" EntitySet="UserHobbies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vacancy_JobType" Association="BubuModel.FK_Vacancy_JobType">
+      <End Role="JobType" EntitySet="JobTypes" />
+      <End Role="Vacancy" EntitySet="Vacancies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLanguage_Language" Association="BubuModel.FK_UserLanguage_Language">
+      <End Role="Language" EntitySet="Languages" />
+      <End Role="UserLanguage" EntitySet="UserLanguages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLanguage_Level" Association="BubuModel.FK_UserLanguage_Level">
+      <End Role="Level" EntitySet="Levels" />
+      <End Role="UserLanguage" EntitySet="UserLanguages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserQualification_Qualification" Association="BubuModel.FK_UserQualification_Qualification">
+      <End Role="Qualification" EntitySet="Qualifications" />
+      <End Role="UserQualification" EntitySet="UserQualifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserReference_Reference" Association="BubuModel.FK_UserReference_Reference">
+      <End Role="Reference" EntitySet="References" />
+      <End Role="UserReference" EntitySet="UserReferences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vacancy_Region" Association="BubuModel.FK_Vacancy_Region">
+      <End Role="Region" EntitySet="Regions" />
+      <End Role="Vacancy" EntitySet="Vacancies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSkill_Skill" Association="BubuModel.FK_UserSkill_Skill">
+      <End Role="Skill" EntitySet="Skills" />
+      <End Role="UserSkill" EntitySet="UserSkills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserHobby_User" Association="BubuModel.FK_UserHobby_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserHobby" EntitySet="UserHobbies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInbox_User" Association="BubuModel.FK_UserInbox_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserInbox" EntitySet="UserInboxes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInbox_User1" Association="BubuModel.FK_UserInbox_User1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserInbox" EntitySet="UserInboxes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLanguage_User" Association="BubuModel.FK_UserLanguage_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserLanguage" EntitySet="UserLanguages" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserQualification_User" Association="BubuModel.FK_UserQualification_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserQualification" EntitySet="UserQualifications" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserReference_User" Association="BubuModel.FK_UserReference_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserReference" EntitySet="UserReferences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSkill_User" Association="BubuModel.FK_UserSkill_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserSkill" EntitySet="UserSkills" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VacancyApply_User" Association="BubuModel.FK_VacancyApply_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="VacancyApply" EntitySet="VacancyApplies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkExperience_User" Association="BubuModel.FK_WorkExperience_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="UserWorkExperience" EntitySet="UserWorkExperiences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInbox_Vacancy" Association="BubuModel.FK_UserInbox_Vacancy">
+      <End Role="Vacancy" EntitySet="Vacancies" />
+      <End Role="UserInbox" EntitySet="UserInboxes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VacancyApply_Vacancy" Association="BubuModel.FK_VacancyApply_Vacancy">
+      <End Role="Vacancy" EntitySet="Vacancies" />
+      <End Role="VacancyApply" EntitySet="VacancyApplies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubActivityComment_User" Association="BubuModel.FK_BusinessClubActivityComment_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="BusinessClubActivityComment" EntitySet="BusinessClubActivityComments" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AccountActivation">
+    <Key>
+      <PropertyRef Name="ActivationId" />
+    </Key>
+    <Property Name="ActivationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ActivationCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Userid" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsCompleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_AccountActivation_User" FromRole="AccountActivation" ToRole="User" />
+  </EntityType>
+  <EntityType Name="AccountType">
+    <Key>
+      <PropertyRef Name="AccountTypeId" />
+    </Key>
+    <Property Name="AccountTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AccountTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="AccountDescription" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="Users" Relationship="BubuModel.FK_User_AccountType" FromRole="AccountType" ToRole="User" />
+  </EntityType>
+  <EntityType Name="BusienssClubNewsInfo">
+    <Key>
+      <PropertyRef Name="BusinessClubNewsInfoId" />
+    </Key>
+    <Property Name="BusinessClubNewsInfoId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="NewsTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="NewsDetail" Type="String" MaxLength="501" FixedLength="false" Unicode="false" />
+    <Property Name="BusinessClubId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BusinessClub" Relationship="BubuModel.FK_BusienssClubNews_BusinessClub" FromRole="BusienssClubNewsInfo" ToRole="BusinessClub" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_BusienssClubNews_User" FromRole="BusienssClubNewsInfo" ToRole="User" />
+  </EntityType>
+  <EntityType Name="BusinessActivityMessageType">
+    <Key>
+      <PropertyRef Name="BusinessActivityMessageTypeId" />
+    </Key>
+    <Property Name="BusinessActivityMessageTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessActivityMessageTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BusinessClubActivities" Relationship="BubuModel.FK_BusinessClubActivity_BusinessActivityMessageType" FromRole="BusinessActivityMessageType" ToRole="BusinessClubActivity" />
+  </EntityType>
+  <EntityType Name="BusinessClub">
+    <Key>
+      <PropertyRef Name="BusinessClubId" />
+    </Key>
+    <Property Name="BusinessClubId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessClubName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Purpose" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="About" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="ContentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContentData" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="format" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="UserCreatedId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="BusienssClubNewsInfoes" Relationship="BubuModel.FK_BusienssClubNews_BusinessClub" FromRole="BusinessClub" ToRole="BusienssClubNewsInfo" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_BusinessClub_User" FromRole="BusinessClub" ToRole="User" />
+    <NavigationProperty Name="BusinessClubActivities" Relationship="BubuModel.FK_BusinessClubActivity_BusinessClub" FromRole="BusinessClub" ToRole="BusinessClubActivity" />
+    <NavigationProperty Name="BusinessClubMembers" Relationship="BubuModel.FK_BusinessClubMember_BusinessClub" FromRole="BusinessClub" ToRole="BusinessClubMember" />
+  </EntityType>
+  <EntityType Name="BusinessClubActivity">
+    <Key>
+      <PropertyRef Name="BusinesClubActivityId" />
+    </Key>
+    <Property Name="BusinesClubActivityId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MessageDetail" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="BusinessClubMessageTypeId" Type="Int32" Nullable="false" />
+    <Property Name="Subject" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="BusinessClubId" Type="Int32" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="ActivityDate" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="BusinessActivityMessageType" Relationship="BubuModel.FK_BusinessClubActivity_BusinessActivityMessageType" FromRole="BusinessClubActivity" ToRole="BusinessActivityMessageType" />
+    <NavigationProperty Name="BusinessClub" Relationship="BubuModel.FK_BusinessClubActivity_BusinessClub" FromRole="BusinessClubActivity" ToRole="BusinessClub" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_BusinessClubActivity_User" FromRole="BusinessClubActivity" ToRole="User" />
+    <NavigationProperty Name="BusinessClubActivityComments" Relationship="BubuModel.FK_BusinessClubActivityComment_BusinessClubActivity" FromRole="BusinessClubActivity" ToRole="BusinessClubActivityComment" />
+  </EntityType>
+  <EntityType Name="BusinessClubActivityComment">
+    <Key>
+      <PropertyRef Name="BusinessClubActivityCommentId" />
+    </Key>
+    <Property Name="BusinessClubActivityCommentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BusinessClubActivityId" Type="Int32" />
+    <Property Name="Message" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" Nullable="false" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BusinessClubActivity" Relationship="BubuModel.FK_BusinessClubActivityComment_BusinessClubActivity" FromRole="BusinessClubActivityComment" ToRole="BusinessClubActivity" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_BusinessClubActivityComment_User" FromRole="BusinessClubActivityComment" ToRole="User" />
+  </EntityType>
+  <EntityType Name="BusinessClubMember">
+    <Key>
+      <PropertyRef Name="BusinessClubMemberId" />
+    </Key>
+    <Property Name="BusinessClubMemberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MemberId" Type="Int32" Nullable="false" />
+    <Property Name="BusinessClubId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="BusinessClub" Relationship="BubuModel.FK_BusinessClubMember_BusinessClub" FromRole="BusinessClubMember" ToRole="BusinessClub" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_BusinessClubMember_User" FromRole="BusinessClubMember" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Commencement">
+    <Key>
+      <PropertyRef Name="CommencementId" />
+    </Key>
+    <Property Name="CommencementId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CommencementDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="BubuModel.FK_User_Commencement" FromRole="Commencement" ToRole="User" />
+  </EntityType>
+  <EntityType Name="CompanyAbout">
+    <Key>
+      <PropertyRef Name="CompanyAboutUsId" />
+    </Key>
+    <Property Name="CompanyAboutUsId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="Heading" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Detail" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CompanyInformation" Relationship="BubuModel.FK_CompanyAboutUs_CompanyInformation" FromRole="CompanyAbout" ToRole="CompanyInformation" />
+  </EntityType>
+  <EntityType Name="CompanyInformation">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CompanySector" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyContentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyContentData" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="Companyformat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyContactNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fileName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="CompanyAbouts" Relationship="BubuModel.FK_CompanyAboutUs_CompanyInformation" FromRole="CompanyInformation" ToRole="CompanyAbout" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_CompanyInformation_User" FromRole="CompanyInformation" ToRole="User" />
+    <NavigationProperty Name="Vacancies" Relationship="BubuModel.FK_Vacancy_CompanyInformation" FromRole="CompanyInformation" ToRole="Vacancy" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CountryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VersionNo" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="BubuModel.FK_User_Country" FromRole="Country" ToRole="User" />
+    <NavigationProperty Name="UserQualifications" Relationship="BubuModel.FK_UserQualification_Country" FromRole="Country" ToRole="UserQualification" />
+  </EntityType>
+  <EntityType Name="DocumentCategory">
+    <Key>
+      <PropertyRef Name="DocumentCategoryid" />
+    </Key>
+    <Property Name="DocumentCategoryid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentCategoryName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="DocumentFormatAllows" Relationship="BubuModel.FK_DocumentFormatAllow_DocumentCategory" FromRole="DocumentCategory" ToRole="DocumentFormatAllow" />
+    <NavigationProperty Name="DocumentUploads" Relationship="BubuModel.FK_DocumentUpload_DocumentCategory" FromRole="DocumentCategory" ToRole="DocumentUpload" />
+  </EntityType>
+  <EntityType Name="DocumentFormatAllow">
+    <Key>
+      <PropertyRef Name="DocumentFormatAllowId" />
+    </Key>
+    <Property Name="DocumentFormatAllowId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentCategoryId" Type="Int32" Nullable="false" />
+    <Property Name="DocumentFormat" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="DocumentCategory" Relationship="BubuModel.FK_DocumentFormatAllow_DocumentCategory" FromRole="DocumentFormatAllow" ToRole="DocumentCategory" />
+  </EntityType>
+  <EntityType Name="DocumentUpload">
+    <Key>
+      <PropertyRef Name="UploadDocumentId" />
+    </Key>
+    <Property Name="UploadDocumentId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Userid" Type="Int32" />
+    <Property Name="DocumentCategoryid" Type="Int32" />
+    <Property Name="ContentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContentData" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="format" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="fileName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="DocumentCategory" Relationship="BubuModel.FK_DocumentUpload_DocumentCategory" FromRole="DocumentUpload" ToRole="DocumentCategory" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_DocumentUpload_User" FromRole="DocumentUpload" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Domicile">
+    <Key>
+      <PropertyRef Name="DomicileId" />
+    </Key>
+    <Property Name="DomicileId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DomicileName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsCompleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Users" Relationship="BubuModel.FK_User_Domicile" FromRole="Domicile" ToRole="User" />
+  </EntityType>
+  <EntityType Name="EmploymentType">
+    <Key>
+      <PropertyRef Name="EmploymentTypeId" />
+    </Key>
+    <Property Name="EmploymentTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="EmploymentTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="formatAllow_old">
+    <Key>
+      <PropertyRef Name="formatId" />
+    </Key>
+    <Property Name="formatId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="formatType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="forProfilePic" Type="Boolean" Nullable="false" />
+    <Property Name="forDocument" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="isActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hobby">
+    <Key>
+      <PropertyRef Name="HobbyId" />
+    </Key>
+    <Property Name="HobbyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="HobbyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UserHobbies" Relationship="BubuModel.FK_UserHobby_Hobby" FromRole="Hobby" ToRole="UserHobby" />
+  </EntityType>
+  <EntityType Name="JobType">
+    <Key>
+      <PropertyRef Name="JobTypeId" />
+    </Key>
+    <Property Name="JobTypeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobTypeName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JobTypeDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Vacancies" Relationship="BubuModel.FK_Vacancy_JobType" FromRole="JobType" ToRole="Vacancy" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Name="LanguageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LanguageName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UserLanguages" Relationship="BubuModel.FK_UserLanguage_Language" FromRole="Language" ToRole="UserLanguage" />
+  </EntityType>
+  <EntityType Name="Level">
+    <Key>
+      <PropertyRef Name="LevelId" />
+    </Key>
+    <Property Name="LevelId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LevelName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LevelCode" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="UserLanguages" Relationship="BubuModel.FK_UserLanguage_Level" FromRole="Level" ToRole="UserLanguage" />
+  </EntityType>
+  <EntityType Name="Qualification">
+    <Key>
+      <PropertyRef Name="QualificationId" />
+    </Key>
+    <Property Name="QualificationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="QualificationName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="QualificationLevel" Type="Int32" />
+    <Property Name="VersionNo" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UserQualifications" Relationship="BubuModel.FK_UserQualification_Qualification" FromRole="Qualification" ToRole="UserQualification" />
+  </EntityType>
+  <EntityType Name="Reference">
+    <Key>
+      <PropertyRef Name="ReferenceId" />
+    </Key>
+    <Property Name="ReferenceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReferenceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UserReferences" Relationship="BubuModel.FK_UserReference_Reference" FromRole="Reference" ToRole="UserReference" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="RegionId" />
+    </Key>
+    <Property Name="RegionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="RegionName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <NavigationProperty Name="Vacancies" Relationship="BubuModel.FK_Vacancy_Region" FromRole="Region" ToRole="Vacancy" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="SkillId" />
+    </Key>
+    <Property Name="SkillId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SkillName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="UserSkills" Relationship="BubuModel.FK_UserSkill_Skill" FromRole="Skill" ToRole="UserSkill" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Userid" />
+    </Key>
+    <Property Name="Userid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="AccountTypeId" Type="Int32" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="MiddleName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DateOfBirth" Type="DateTime" Precision="3" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContactNumber" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="VersionNo" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="AccountStatus" Type="Int32" />
+    <Property Name="ContentType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ContentData" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="format" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ProfileEmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="UserDomicile" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="IsMarried" Type="Boolean" Nullable="false" />
+    <Property Name="Gender" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="CommencementID" Type="Int32" />
+    <Property Name="DomicileId" Type="Int32" />
+    <Property Name="ProfileURL" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="AccountActivations" Relationship="BubuModel.FK_AccountActivation_User" FromRole="User" ToRole="AccountActivation" />
+    <NavigationProperty Name="AccountType" Relationship="BubuModel.FK_User_AccountType" FromRole="User" ToRole="AccountType" />
+    <NavigationProperty Name="BusienssClubNewsInfoes" Relationship="BubuModel.FK_BusienssClubNews_User" FromRole="User" ToRole="BusienssClubNewsInfo" />
+    <NavigationProperty Name="BusinessClubs" Relationship="BubuModel.FK_BusinessClub_User" FromRole="User" ToRole="BusinessClub" />
+    <NavigationProperty Name="BusinessClubActivities" Relationship="BubuModel.FK_BusinessClubActivity_User" FromRole="User" ToRole="BusinessClubActivity" />
+    <NavigationProperty Name="BusinessClubMembers" Relationship="BubuModel.FK_BusinessClubMember_User" FromRole="User" ToRole="BusinessClubMember" />
+    <NavigationProperty Name="Commencement" Relationship="BubuModel.FK_User_Commencement" FromRole="User" ToRole="Commencement" />
+    <NavigationProperty Name="CompanyInformations" Relationship="BubuModel.FK_CompanyInformation_User" FromRole="User" ToRole="CompanyInformation" />
+    <NavigationProperty Name="Country" Relationship="BubuModel.FK_User_Country" FromRole="User" ToRole="Country" />
+    <NavigationProperty Name="DocumentUploads" Relationship="BubuModel.FK_DocumentUpload_User" FromRole="User" ToRole="DocumentUpload" />
+    <NavigationProperty Name="Domicile" Relationship="BubuModel.FK_User_Domicile" FromRole="User" ToRole="Domicile" />
+    <NavigationProperty Name="UserHobbies" Relationship="BubuModel.FK_UserHobby_User" FromRole="User" ToRole="UserHobby" />
+    <NavigationProperty Name="UserInboxes" Relationship="BubuModel.FK_UserInbox_User" FromRole="User" ToRole="UserInbox" />
+    <NavigationProperty Name="UserInboxes1" Relationship="BubuModel.FK_UserInbox_User1" FromRole="User" ToRole="UserInbox" />
+    <NavigationProperty Name="UserLanguages" Relationship="BubuModel.FK_UserLanguage_User" FromRole="User" ToRole="UserLanguage" />
+    <NavigationProperty Name="UserQualifications" Relationship="BubuModel.FK_UserQualification_User" FromRole="User" ToRole="UserQualification" />
+    <NavigationProperty Name="UserReferences" Relationship="BubuModel.FK_UserReference_User" FromRole="User" ToRole="UserReference" />
+    <NavigationProperty Name="UserSkills" Relationship="BubuModel.FK_UserSkill_User" FromRole="User" ToRole="UserSkill" />
+    <NavigationProperty Name="VacancyApplies" Relationship="BubuModel.FK_VacancyApply_User" FromRole="User" ToRole="VacancyApply" />
+    <NavigationProperty Name="UserWorkExperiences" Relationship="BubuModel.FK_WorkExperience_User" FromRole="User" ToRole="UserWorkExperience" />
+    <NavigationProperty Name="BusinessClubActivityComments" Relationship="BubuModel.FK_BusinessClubActivityComment_User" FromRole="User" ToRole="BusinessClubActivityComment" />
+  </EntityType>
+  <EntityType Name="UserHobby">
+    <Key>
+      <PropertyRef Name="UserHobbyId" />
+    </Key>
+    <Property Name="UserHobbyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="HobbyId" Type="Int32" Nullable="false" />
+    <Property Name="HobbyDetail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Hobby" Relationship="BubuModel.FK_UserHobby_Hobby" FromRole="UserHobby" ToRole="Hobby" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_UserHobby_User" FromRole="UserHobby" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UserInbox">
+    <Key>
+      <PropertyRef Name="UserInboxId" />
+    </Key>
+    <Property Name="UserInboxId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="InboxUserId" Type="Int32" />
+    <Property Name="SenderId" Type="Int32" />
+    <Property Name="VacancyId" Type="Int32" />
+    <Property Name="Message" Type="String" MaxLength="251" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_UserInbox_User" FromRole="UserInbox" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="BubuModel.FK_UserInbox_User1" FromRole="UserInbox" ToRole="User" />
+    <NavigationProperty Name="Vacancy" Relationship="BubuModel.FK_UserInbox_Vacancy" FromRole="UserInbox" ToRole="Vacancy" />
+  </EntityType>
+  <EntityType Name="UserLanguage">
+    <Key>
+      <PropertyRef Name="UserLanguageId" />
+    </Key>
+    <Property Name="UserLanguageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="LanguageId" Type="Int32" Nullable="false" />
+    <Property Name="LevelId" Type="Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Language" Relationship="BubuModel.FK_UserLanguage_Language" FromRole="UserLanguage" ToRole="Language" />
+    <NavigationProperty Name="Level" Relationship="BubuModel.FK_UserLanguage_Level" FromRole="UserLanguage" ToRole="Level" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_UserLanguage_User" FromRole="UserLanguage" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UserQualification">
+    <Key>
+      <PropertyRef Name="UserQualificationId" />
+    </Key>
+    <Property Name="UserQualificationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="QualificationId" Type="Int32" />
+    <Property Name="CompletedYear" Type="Int32" />
+    <Property Name="CountryId" Type="Int32" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Institution" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Percentage" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="CGPA" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="VersionNo" Type="Binary" MaxLength="8" FixedLength="true" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="IsCompleted" Type="Boolean" />
+    <NavigationProperty Name="Country" Relationship="BubuModel.FK_UserQualification_Country" FromRole="UserQualification" ToRole="Country" />
+    <NavigationProperty Name="Qualification" Relationship="BubuModel.FK_UserQualification_Qualification" FromRole="UserQualification" ToRole="Qualification" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_UserQualification_User" FromRole="UserQualification" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UserReference">
+    <Key>
+      <PropertyRef Name="UserReferenceId" />
+    </Key>
+    <Property Name="UserReferenceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="ReferenceId" Type="Int32" Nullable="false" />
+    <Property Name="ReferenceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReferenceContactNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReferenceCompany" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="ReferencePosition" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Reference" Relationship="BubuModel.FK_UserReference_Reference" FromRole="UserReference" ToRole="Reference" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_UserReference_User" FromRole="UserReference" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UserSkill">
+    <Key>
+      <PropertyRef Name="UserSkillId" />
+    </Key>
+    <Property Name="UserSkillId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="SkillId" Type="Int32" Nullable="false" />
+    <Property Name="SkillDetail" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="Skill" Relationship="BubuModel.FK_UserSkill_Skill" FromRole="UserSkill" ToRole="Skill" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_UserSkill_User" FromRole="UserSkill" ToRole="User" />
+  </EntityType>
+  <EntityType Name="UserWorkExperience">
+    <Key>
+      <PropertyRef Name="UserWorkExperienceid" />
+    </Key>
+    <Property Name="UserWorkExperienceid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Company" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JobFunction" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Position" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="JobLocation" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Institution" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JobFrom" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="JobTo" Type="DateTime" Precision="3" />
+    <Property Name="IsCurrentJob" Type="Boolean" Nullable="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_WorkExperience_User" FromRole="UserWorkExperience" ToRole="User" />
+  </EntityType>
+  <EntityType Name="Vacancy">
+    <Key>
+      <PropertyRef Name="VacancyId" />
+    </Key>
+    <Property Name="VacancyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyId" Type="Int32" Nullable="false" />
+    <Property Name="IsPrivate" Type="Boolean" Nullable="false" />
+    <Property Name="JobTitle" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JobFunction" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JobDetail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="JobTypeId" Type="Int32" Nullable="false" />
+    <Property Name="IsVacancyCompleted" Type="Boolean" Nullable="false" />
+    <Property Name="CompletedRemark" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+    <Property Name="RegionId" Type="Int32" />
+    <NavigationProperty Name="CompanyInformation" Relationship="BubuModel.FK_Vacancy_CompanyInformation" FromRole="Vacancy" ToRole="CompanyInformation" />
+    <NavigationProperty Name="JobType" Relationship="BubuModel.FK_Vacancy_JobType" FromRole="Vacancy" ToRole="JobType" />
+    <NavigationProperty Name="Region" Relationship="BubuModel.FK_Vacancy_Region" FromRole="Vacancy" ToRole="Region" />
+    <NavigationProperty Name="UserInboxes" Relationship="BubuModel.FK_UserInbox_Vacancy" FromRole="Vacancy" ToRole="UserInbox" />
+    <NavigationProperty Name="VacancyApplies" Relationship="BubuModel.FK_VacancyApply_Vacancy" FromRole="Vacancy" ToRole="VacancyApply" />
+  </EntityType>
+  <EntityType Name="VacancyApply">
+    <Key>
+      <PropertyRef Name="VacancyApplyId" />
+    </Key>
+    <Property Name="VacancyApplyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VacancyId" Type="Int32" Nullable="false" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="MotivationLetter" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsActive" Type="Boolean" />
+    <Property Name="IsCancelByEmployer" Type="Boolean" />
+    <NavigationProperty Name="User" Relationship="BubuModel.FK_VacancyApply_User" FromRole="VacancyApply" ToRole="User" />
+    <NavigationProperty Name="Vacancy" Relationship="BubuModel.FK_VacancyApply_Vacancy" FromRole="VacancyApply" ToRole="Vacancy" />
+  </EntityType>
+  <EntityType Name="WorkExperience">
+    <Key>
+      <PropertyRef Name="WorkExperienceId" />
+    </Key>
+    <Property Name="WorkExperienceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="WorkExperienceName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DaysCount" Type="Int32" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+    <Property Name="LastModifiedBy" Type="Int32" />
+    <Property Name="LastModifiedDate" Type="DateTime" Precision="3" />
+    <Property Name="IsCompleted" Type="Boolean" />
+    <Property Name="IsActive" Type="Boolean" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AccountActivation_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="BubuModel.AccountActivation" Role="AccountActivation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="AccountActivation">
+        <PropertyRef Name="Userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_AccountType">
+    <End Type="BubuModel.AccountType" Role="AccountType" Multiplicity="0..1" />
+    <End Type="BubuModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountType">
+        <PropertyRef Name="AccountTypeId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="AccountTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusienssClubNews_BusinessClub">
+    <End Type="BubuModel.BusinessClub" Role="BusinessClub" Multiplicity="1" />
+    <End Type="BubuModel.BusienssClubNewsInfo" Role="BusienssClubNewsInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessClub">
+        <PropertyRef Name="BusinessClubId" />
+      </Principal>
+      <Dependent Role="BusienssClubNewsInfo">
+        <PropertyRef Name="BusinessClubId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusienssClubNews_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="1" />
+    <End Type="BubuModel.BusienssClubNewsInfo" Role="BusienssClubNewsInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="BusienssClubNewsInfo">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubActivity_BusinessActivityMessageType">
+    <End Type="BubuModel.BusinessActivityMessageType" Role="BusinessActivityMessageType" Multiplicity="1" />
+    <End Type="BubuModel.BusinessClubActivity" Role="BusinessClubActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessActivityMessageType">
+        <PropertyRef Name="BusinessActivityMessageTypeId" />
+      </Principal>
+      <Dependent Role="BusinessClubActivity">
+        <PropertyRef Name="BusinessClubMessageTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClub_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="1" />
+    <End Type="BubuModel.BusinessClub" Role="BusinessClub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="BusinessClub">
+        <PropertyRef Name="UserCreatedId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubActivity_BusinessClub">
+    <End Type="BubuModel.BusinessClub" Role="BusinessClub" Multiplicity="1" />
+    <End Type="BubuModel.BusinessClubActivity" Role="BusinessClubActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessClub">
+        <PropertyRef Name="BusinessClubId" />
+      </Principal>
+      <Dependent Role="BusinessClubActivity">
+        <PropertyRef Name="BusinessClubId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubMember_BusinessClub">
+    <End Type="BubuModel.BusinessClub" Role="BusinessClub" Multiplicity="1" />
+    <End Type="BubuModel.BusinessClubMember" Role="BusinessClubMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessClub">
+        <PropertyRef Name="BusinessClubId" />
+      </Principal>
+      <Dependent Role="BusinessClubMember">
+        <PropertyRef Name="BusinessClubId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubActivity_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="BubuModel.BusinessClubActivity" Role="BusinessClubActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="BusinessClubActivity">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubActivityComment_BusinessClubActivity">
+    <End Type="BubuModel.BusinessClubActivity" Role="BusinessClubActivity" Multiplicity="0..1" />
+    <End Type="BubuModel.BusinessClubActivityComment" Role="BusinessClubActivityComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessClubActivity">
+        <PropertyRef Name="BusinesClubActivityId" />
+      </Principal>
+      <Dependent Role="BusinessClubActivityComment">
+        <PropertyRef Name="BusinessClubActivityId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubMember_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="1" />
+    <End Type="BubuModel.BusinessClubMember" Role="BusinessClubMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="BusinessClubMember">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Commencement">
+    <End Type="BubuModel.Commencement" Role="Commencement" Multiplicity="0..1" />
+    <End Type="BubuModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Commencement">
+        <PropertyRef Name="CommencementId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="CommencementID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyAboutUs_CompanyInformation">
+    <End Type="BubuModel.CompanyInformation" Role="CompanyInformation" Multiplicity="1" />
+    <End Type="BubuModel.CompanyAbout" Role="CompanyAbout" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompanyInformation">
+        <PropertyRef Name="CompanyId" />
+      </Principal>
+      <Dependent Role="CompanyAbout">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyInformation_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="1" />
+    <End Type="BubuModel.CompanyInformation" Role="CompanyInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="CompanyInformation">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vacancy_CompanyInformation">
+    <End Type="BubuModel.CompanyInformation" Role="CompanyInformation" Multiplicity="1" />
+    <End Type="BubuModel.Vacancy" Role="Vacancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompanyInformation">
+        <PropertyRef Name="CompanyId" />
+      </Principal>
+      <Dependent Role="Vacancy">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Country">
+    <End Type="BubuModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="BubuModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserQualification_Country">
+    <End Type="BubuModel.Country" Role="Country" Multiplicity="0..1" />
+    <End Type="BubuModel.UserQualification" Role="UserQualification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="UserQualification">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentFormatAllow_DocumentCategory">
+    <End Type="BubuModel.DocumentCategory" Role="DocumentCategory" Multiplicity="1" />
+    <End Type="BubuModel.DocumentFormatAllow" Role="DocumentFormatAllow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentCategory">
+        <PropertyRef Name="DocumentCategoryid" />
+      </Principal>
+      <Dependent Role="DocumentFormatAllow">
+        <PropertyRef Name="DocumentCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentUpload_DocumentCategory">
+    <End Type="BubuModel.DocumentCategory" Role="DocumentCategory" Multiplicity="0..1" />
+    <End Type="BubuModel.DocumentUpload" Role="DocumentUpload" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentCategory">
+        <PropertyRef Name="DocumentCategoryid" />
+      </Principal>
+      <Dependent Role="DocumentUpload">
+        <PropertyRef Name="DocumentCategoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentUpload_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="BubuModel.DocumentUpload" Role="DocumentUpload" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="DocumentUpload">
+        <PropertyRef Name="Userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Domicile">
+    <End Type="BubuModel.Domicile" Role="Domicile" Multiplicity="0..1" />
+    <End Type="BubuModel.User" Role="User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Domicile">
+        <PropertyRef Name="DomicileId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="DomicileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserHobby_Hobby">
+    <End Type="BubuModel.Hobby" Role="Hobby" Multiplicity="1" />
+    <End Type="BubuModel.UserHobby" Role="UserHobby" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hobby">
+        <PropertyRef Name="HobbyId" />
+      </Principal>
+      <Dependent Role="UserHobby">
+        <PropertyRef Name="HobbyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vacancy_JobType">
+    <End Type="BubuModel.JobType" Role="JobType" Multiplicity="1" />
+    <End Type="BubuModel.Vacancy" Role="Vacancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobType">
+        <PropertyRef Name="JobTypeId" />
+      </Principal>
+      <Dependent Role="Vacancy">
+        <PropertyRef Name="JobTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLanguage_Language">
+    <End Type="BubuModel.Language" Role="Language" Multiplicity="1" />
+    <End Type="BubuModel.UserLanguage" Role="UserLanguage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="LanguageId" />
+      </Principal>
+      <Dependent Role="UserLanguage">
+        <PropertyRef Name="LanguageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLanguage_Level">
+    <End Type="BubuModel.Level" Role="Level" Multiplicity="1" />
+    <End Type="BubuModel.UserLanguage" Role="UserLanguage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Level">
+        <PropertyRef Name="LevelId" />
+      </Principal>
+      <Dependent Role="UserLanguage">
+        <PropertyRef Name="LevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserQualification_Qualification">
+    <End Type="BubuModel.Qualification" Role="Qualification" Multiplicity="0..1" />
+    <End Type="BubuModel.UserQualification" Role="UserQualification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Qualification">
+        <PropertyRef Name="QualificationId" />
+      </Principal>
+      <Dependent Role="UserQualification">
+        <PropertyRef Name="QualificationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserReference_Reference">
+    <End Type="BubuModel.Reference" Role="Reference" Multiplicity="1" />
+    <End Type="BubuModel.UserReference" Role="UserReference" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reference">
+        <PropertyRef Name="ReferenceId" />
+      </Principal>
+      <Dependent Role="UserReference">
+        <PropertyRef Name="ReferenceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vacancy_Region">
+    <End Type="BubuModel.Region" Role="Region" Multiplicity="0..1" />
+    <End Type="BubuModel.Vacancy" Role="Vacancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="RegionId" />
+      </Principal>
+      <Dependent Role="Vacancy">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSkill_Skill">
+    <End Type="BubuModel.Skill" Role="Skill" Multiplicity="1" />
+    <End Type="BubuModel.UserSkill" Role="UserSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="SkillId" />
+      </Principal>
+      <Dependent Role="UserSkill">
+        <PropertyRef Name="SkillId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserHobby_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="1" />
+    <End Type="BubuModel.UserHobby" Role="UserHobby" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserHobby">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInbox_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="BubuModel.UserInbox" Role="UserInbox" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserInbox">
+        <PropertyRef Name="InboxUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInbox_User1">
+    <End Type="BubuModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="BubuModel.UserInbox" Role="UserInbox" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserInbox">
+        <PropertyRef Name="SenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLanguage_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="1" />
+    <End Type="BubuModel.UserLanguage" Role="UserLanguage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserLanguage">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserQualification_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="1" />
+    <End Type="BubuModel.UserQualification" Role="UserQualification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserQualification">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserReference_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="1" />
+    <End Type="BubuModel.UserReference" Role="UserReference" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserReference">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSkill_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="1" />
+    <End Type="BubuModel.UserSkill" Role="UserSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserSkill">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VacancyApply_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="1" />
+    <End Type="BubuModel.VacancyApply" Role="VacancyApply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="VacancyApply">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkExperience_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="1" />
+    <End Type="BubuModel.UserWorkExperience" Role="UserWorkExperience" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserWorkExperience">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInbox_Vacancy">
+    <End Type="BubuModel.Vacancy" Role="Vacancy" Multiplicity="0..1" />
+    <End Type="BubuModel.UserInbox" Role="UserInbox" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vacancy">
+        <PropertyRef Name="VacancyId" />
+      </Principal>
+      <Dependent Role="UserInbox">
+        <PropertyRef Name="VacancyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VacancyApply_Vacancy">
+    <End Type="BubuModel.Vacancy" Role="Vacancy" Multiplicity="1" />
+    <End Type="BubuModel.VacancyApply" Role="VacancyApply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vacancy">
+        <PropertyRef Name="VacancyId" />
+      </Principal>
+      <Dependent Role="VacancyApply">
+        <PropertyRef Name="VacancyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubActivityComment_User">
+    <End Type="BubuModel.User" Role="User" Multiplicity="1" />
+    <End Type="BubuModel.BusinessClubActivityComment" Role="BusinessClubActivityComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="BusinessClubActivityComment">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,173 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Emp_Master.master.cs"
+    Inherits="Bubu_WebApp.Forms.Emp_Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../Style/bubu.css" rel="stylesheet" />
+
+    <script src="../Framework/JQuery/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="../Framework/JQuery/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <link href="../Framework/JQuery/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
+    <link href="../Framework/BootStrap/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Framework/BootStrap/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="../Framework/BootStrap/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+    <script src="../Framework/JS/bubu.js"></script>
+    <%--<script src="../Framework/JS/Login.js"></script>--%>
+
+    <style>
+        /*.div {
+            border-style: solid;
+            border-color: #0000ff;
+            border-width: 1px;
+        }*/
+    </style>
+    <script>
+
+        $(document).ready(function () {
+
+            Accordian(".accordian");
+            DatePicker(".calendar");
+            Tab(".tab");
+            var path = window.location.pathname;
+            var filenameWithExtension
+                = path.split("/").pop();
+            var filename = filenameWithExtension.split(".")[0];
+            $("#" + filename).addClass("fixedniceColor");
+            if (filename == "BusinessClubMgmt") {
+                // $("#BusinessClubEvent").removeClass("hide");
+
+            }
+            else if (filename == "BusinessClubDetail") {
+
+                $("#JobSearch").addClass("hide");
+                $("#EmployeeNewsInfo").addClass("hide");
+                $("#Business").addClass("hide");
+                $("#BusinessClubEvent").removeClass("hide");
+                $("#Club").removeClass("hide").addClass("fixedniceColor");
+                // $("#Club").addClass("fixedniceColor");
+
+            }
+            else if (filename == "BusinessClubEvent") {
+
+                //  $("#JobSearch").addClass("hide");
+                $("#EmployeeNewsInfo").addClass("hide");
+                $("#Business").addClass("hide");
+                // $("#BusinessClubEvent").removeClass("hide");
+                $("#Club").removeClass("hide");
+                $("#BusinessClubEvent").removeClass("hide").addClass("fixedniceColor");
+                $("#JobSearch").addClass("hide");
+            }
+            else if (filename == "AddBusinessClubEvent") {
+
+                //  $("#JobSearch").addClass("hide");
+                $("#EmployeeNewsInfo").addClass("hide");
+                $("#Business").addClass("hide");
+                // $("#BusinessClubEvent").removeClass("hide");
+                $("#Club").removeClass("hide");
+                $("#BusinessClubEvent").removeClass("hide").addClass("fixedniceColor");
+                $("#JobSearch").addClass("hide");
+            }
+
+
+            else if (filename == "AddBusinessClub") {
+                $("#JobSearch").addClass("hide");
+
+            }
+
+        });
+
+    </script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-right">
+                    <asp:Button ID="btnLogOut" runat="server" CssClass="form-btn" Text="Log Out" OnClick="btnLogOut_Click" />
+                </div>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="container ">
+                <div class="row divMaster">
+                    <div id="profileMgmt" class="col-3 nicecolor divMaster  pointer" style="height: 200px; overflow: auto">
+                        <div onclick="Redirect('profileMgmt.aspx')">
+                            <asp:Image ID="imgProfilePicture" runat="server"
+                                class="widthHeight180 margin-Top5 pointer borderRadious"
+                                ImageUrl='<%# GetImage(Eval("CONTENTDATA")) %>' />
+                        </div>
+                        <div id="div3" class="pointer editButtonHover" onclick="Redirect('profileUpload.aspx')">Edit</div>
+                    </div>
+                    <div class="col-3 nicecolor divMaster  pointer" style="overflow: auto">
+                        <div onclick="Redirect('profileMgmt.aspx')">
+                            <asp:Label ID="lblUserName" runat="server" Text=""></asp:Label><br />
+                             <asp:Label ID="lblUserAddress" runat="server" Text=""></asp:Label><br />
+                            <asp:Label ID="lblDOB" runat="server" Text=""></asp:Label><br />
+                            <asp:Label ID="lblDomicile" runat="server" Text=""></asp:Label><br />
+                            <asp:Label ID="lblCompany" runat="server" Text=""></asp:Label><br />
+                            <asp:Label ID="lblFunction" runat="server" Text=""></asp:Label><br />
+                            <asp:Label ID="lblPosition" runat="server" Text=""></asp:Label><br />
+                            <asp:Label ID="lblLatestEducation" runat="server" Text=""></asp:Label><br />
+                        </div>
+                        <div id="div3" class="pointer editButtonHover" onclick="Redirect('PersonalInformation.aspx')">Edit</div>
+                        <%--<asp:Label ID="lblJobLocation" runat="server" Text=""></asp:Label>--%>
+                    </div>
+                    <div id="BusinessClubMgmt" class="col-3 nicecolor divMaster pointer" onclick="Redirect('BusinessClubMgmt.aspx')" style="overflow: auto">
+                        <br />
+                        <img class="widthHeight200 center-block pointer" src="../Images/Icon/BusinessClub.jpg" />
+                    </div>
+                    <div id="EmployeeMessageMgmt" class="col-3 nicecolor divMaster pointer" onclick="Redirect('EmployeeMessageMgmt.aspx')" style="height: 200px; overflow: auto">
+                        <br />
+                        <img class="widthHeight200 center-block" src="../Images/Icon/MessageBox.jpg" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="row">
+
+                            <div id="JobSearch" class="col-12 nicecolor divMaster pointer" style="overflow: auto" onclick="Redirect('JobSearch.aspx')">
+                                <img class="widthHeight195 center-block" src="../Images/Icon/Search.png" />
+                            </div>
+                            <div id="EmployeeNewsInfo" class="col-12 nicecolor divMaster pointer" style="overflow: auto" onclick="Redirect('EmployeeNewsInfo.aspx')">
+                                <img class="widthHeight195 center-block" src="../Images/Icon/news.png" />
+                            </div>
+                            <div id="Business" class="col-12 nicecolor divMaster pointer" style="overflow: auto" onclick="Redirect('Business.aspx')">
+                                <br />
+                                <br />
+                                <br />
+                                BUSINESS
+                            </div>
+                            <div id="Club" class="col-12 nicecolor divMaster pointer hide" style="overflow: auto" onclick="RedirectWithQS('BusinessClubDetail.aspx')">
+                                <img class="widthHeight195 center-block" src="../Images/Icon/club.jpg" />
+                            </div>
+                            <div id="BusinessClubEvent" class="col-12 nicecolor divMaster pointer hide" style="overflow: auto" onclick="RedirectWithQS('BusinessClubEvent.aspx')">
+                                <img class="widthHeight195 center-block" src="../Images/Icon/event.png" />
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="col-9" style="overflow: auto; padding-left: 10px; padding-right: 10px;">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </form>
+</body>
+</html>

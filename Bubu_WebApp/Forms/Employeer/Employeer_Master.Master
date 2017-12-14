@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Employeer_Master.master.cs" Inherits="Bubu_WebApp.Forms.Employeer.Employeer_Master" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <link href="../../Style/bubu.css" rel="stylesheet" />
+    <link href="../../Framework/JQuery/jquery-ui-1.12.1/jquery-ui.css" rel="stylesheet" />
+    <script src="../../Framework/JQuery/jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="../../Framework/JQuery/jquery-ui-1.12.1/jquery-ui.js"></script>
+    <link href="../../Framework/BootStrap/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../../Framework/BootStrap/bootstrap-4.0.0-alpha.6-dist/css/bootstrap.css" rel="stylesheet" />
+    <script src="../../Framework/BootStrap/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js"></script>
+    <script src="../../Framework/JS/bubu.js"></script>
+    <%--<script src="../Framework/JS/Login.js"></script>--%>
+
+    <style>
+        /*.div {
+            border-style: solid;
+            border-color: #0000ff;
+            border-width: 1px;
+        }*/
+    </style>
+    <script>
+
+        $(document).ready(function () {
+            Accordian(".accordian");
+            DatePicker(".calendar");
+            Tab(".tab");
+            var path = window.location.pathname;
+            var filenameWithExtension
+                = path.split("/").pop();
+            var filename = filenameWithExtension.split(".")[0];
+            $("#" + filename).addClass("fixedniceColor");
+
+            if (filename.toLocaleLowerCase() == "vacancysearchcandidate")
+            {
+                $("#EmployeerVacancyMgmt").addClass("fixedniceColor");
+                //$("#JobSearch").addClass("hide");
+                //$("#EmployeeNewsInfo").addClass("hide");
+                //$("#Business").addClass("hide");
+                //$("#BusinessClubEvent").removeClass("hide");
+                //$("#Club").removeClass("hide").addClass("fixedniceColor");
+
+            }
+
+        });
+        function Redirect(formName) {
+            window.location.href = formName;
+        }
+
+        function RedirectWithParam(context, formName)
+        {
+            window.open(formName + "?idx=" + $(context).attr("idx"), '_blank');
+            //window.location.href = formName+"?idx="+$(context).attr("idx");//
+        }
+    </script>
+
+</head>
+<body class="body">
+    <form id="form1" runat="server">
+
+        <br />
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-right">
+                    <asp:Button ID="btnLogOut" runat="server" CssClass="form-btn" Text="Log Out" OnClick="btnLogOut_Click" />
+                </div>
+            </div>
+        </div>
+        <div class="">
+            <div class="container ">
+                <div class="row divMaster">
+                    <div id="HomeEmployeer" class="col-3 nicecolor divMaster col-centered pointer" style="overflow: auto">
+                        <div onclick="Redirect('HomeEmployeer.aspx')">
+                            <asp:Image ID="imgCompanyLogo" runat="server" class="widthHeight180 margin-Top5 pointer borderRadious" />
+                        </div>
+                          <div id="div3" class="pointer editButtonHover" onclick="Redirect('CompanyInformationEdit.aspx')">Edit</div>
+                    </div>
+                    <div class="col-6 nicecolor divMaster" style="overflow: auto">
+                        <asp:Label ID="lblCompanyName" runat="server" Text=""></asp:Label><br />
+                    </div>
+
+                    <div id="EmployerMessageMgmt" class="col-3 nicecolor divMaster pointer" onclick="Redirect('EmployerMessageMgmt.aspx')" style="height: 200px; overflow: auto">
+                        <br />
+                        <img class="widthHeight200 center-block" src="../../Images/Icon/MessageBox.jpg" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="row">
+
+                            <div id="EmployeerAboutUs" class="col-12 nicecolor divMaster pointer" style="overflow: auto" onclick="Redirect('EmployeerAboutUs.aspx')">
+                                <img class="widthHeight195 center-block" src="../../Images/Icon/About.png" />
+                            </div>
+                            <div id="EmployeerVacancyMgmt" class="col-12 nicecolor divMaster pointer" style="overflow: auto" onclick="Redirect('EmployeerVacancyMgmt.aspx')">
+                                <img class="widthHeight195 center-block" src="../../Images/Icon/vacancy.png" />
+
+                            </div>
+                            <div id="EmployerNEWSMgmt" class="col-12 nicecolor divMaster pointer" style="overflow: auto" onclick="Redirect('EmployerNEWSMgmt.aspx')">
+                                <img class="widthHeight195 center-block" src="../../Images/Icon/news.png" />
+
+                            </div>
+                              <div id="CVMGMT" class="col-12 nicecolor divMaster pointer hide" style="overflow: auto;" idx="" onclick="RedirectWithParam(this,'CVMgmt.aspx')">
+                                <img class="widthHeight195 center-block" src="../../Images/Icon/CV.JPG" />
+
+                            </div>
+                              <div id="CERTIFICATEMGMT" class="col-12 nicecolor divMaster pointer hide" style="overflow: auto;" idx="" onclick="RedirectWithParam(this,'CertificateMgmt.aspx')">
+                                <img class="widthHeight195 center-block" src="../../Images/Icon/CERTIFICATE.png" />
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-9 " style="overflow: auto">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,8 @@
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAOClassLib\bin\Release\DAOClassLib.dll.config
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAOClassLib\bin\Release\DAOClassLib.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAOClassLib\bin\Release\DAOClassLib.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAOClassLib\bin\Release\EntityFramework.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAOClassLib\bin\Release\EntityFramework.xml
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAOClassLib\obj\Release\DAOClassLib.csprojResolveAssemblyReference.cache
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAOClassLib\obj\Release\DAOClassLib.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAOClassLib\obj\Release\DAOClassLib.pdb

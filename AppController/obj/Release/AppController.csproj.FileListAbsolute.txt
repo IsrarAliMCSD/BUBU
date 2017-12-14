@@ -1,0 +1,15 @@
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\bin\Release\AppController.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\bin\Release\AppController.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\bin\Release\BAL.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\bin\Release\DAOClassLib.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\bin\Release\DALDelegate.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\bin\Release\EntityFramework.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\bin\Release\DAO.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\bin\Release\BAL.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\bin\Release\DAOClassLib.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\bin\Release\DALDelegate.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\bin\Release\EntityFramework.xml
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\bin\Release\DAO.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\obj\Release\AppController.csprojResolveAssemblyReference.cache
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\obj\Release\AppController.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\AppController\obj\Release\AppController.pdb

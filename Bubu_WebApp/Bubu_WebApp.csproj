@@ -1,0 +1,1152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{63579C96-2412-4DB8-8C8A-D5A31AEF3BB9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bubu_WebApp</RootNamespace>
+    <AssemblyName>Bubu_WebApp</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>0</WarningLevel>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DocumentationFile>bin\Bubu_WebApp.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="NReco.PdfGenerator">
+      <HintPath>..\..\..\..\..\Desktop\PDF code\PDF code\NReco.PdfGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.1.8.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery.UI.Combined">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.UI.Combined.1.8.24\lib\net45\AspNet.ScriptManager.jQuery.UI.Combined.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.MSAjax, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.4.5.6\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.0.0\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Providers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Providers.Core.1.2\lib\net40\System.Web.Providers.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net40-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.0.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net40-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Membership.OpenAuth, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.Membership.OpenAuth.1.0.1\lib\net45\Microsoft.AspNet.Membership.OpenAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.1.0\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Web.Optimization.WebForms">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.WebForms.1.0.0\lib\net45\Microsoft.AspNet.Web.Optimization.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.FriendlyUrls, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.0\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="About.aspx" />
+    <Content Include="App_Class\Account\Login.aspx" />
+    <Content Include="App_Class\Account\Manage.aspx" />
+    <Content Include="App_Class\Account\OpenAuthProviders.ascx" />
+    <Content Include="App_Class\Account\Register.aspx" />
+    <Content Include="App_Class\Account\RegisterExternalLogin.aspx" />
+    <Content Include="Contact.aspx" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery-ui.css" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\minified\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\minified\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\minified\jquery-ui.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.accordion.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.autocomplete.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.button.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.core.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.datepicker.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.dialog.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.progressbar.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.resizable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.selectable.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
+    <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="EmployeeSignUp.aspx" />
+    <Content Include="Forms\AccountActivate.aspx" />
+    <Content Include="Forms\AddBusinessClub.aspx" />
+    <Content Include="Forms\AddBusinessClubDetail.aspx" />
+    <Content Include="Forms\AddBusinessClubEvent.aspx" />
+    <Content Include="Forms\Business.aspx" />
+    <Content Include="Forms\BusinessClubDetail.aspx" />
+    <Content Include="Forms\BusinessClubEvent.aspx" />
+    <Content Include="Forms\BusinessClubMgmt.aspx" />
+    <Content Include="Forms\CompanyInfo.aspx" />
+    <Content Include="Forms\CreateMessage.aspx" />
+    <Content Include="Forms\CurriculumVitae.aspx" />
+    <Content Include="Forms\DocumentUploadMgmt.aspx" />
+    <Content Include="Forms\EmployeeHome.aspx" />
+    <Content Include="Forms\EmployeeMessageMgmt.aspx" />
+    <Content Include="Forms\EmployeeNewsInfo.aspx" />
+    <Content Include="Forms\Employeer\CertificateMgmt.aspx" />
+    <Content Include="Forms\Employeer\CompanyInformationEdit.aspx" />
+    <Content Include="Forms\Employeer\CreateMessage.aspx" />
+    <Content Include="Forms\Employeer\CVmgmt.aspx" />
+    <Content Include="Forms\Employeer\EmployeerAboutUs.aspx" />
+    <Content Include="Forms\Employeer\EmployeerAboutUsMgmt.aspx" />
+    <Content Include="Forms\Employeer\EmployeerVacancyMgmt.aspx" />
+    <Content Include="Forms\Employeer\EmployerMessageMgmt.aspx" />
+    <Content Include="Forms\Employeer\EmployerNEWSMgmt.aspx" />
+    <Content Include="Forms\Employeer\HomeEmployeer.aspx" />
+    <Content Include="Forms\Employeer\VacancyApplicant.aspx" />
+    <Content Include="Forms\Employeer\VacancyContactCandidate.aspx" />
+    <Content Include="Forms\Employeer\VacancySearchCandidate.aspx" />
+    <Content Include="Forms\JobDetail.aspx" />
+    <Content Include="Forms\JobSearch.aspx" />
+    <Content Include="Forms\Template\CVTemplate.txt" />
+    <Content Include="Forms\UserControls\AddBusinessClubRequest.ascx" />
+    <Content Include="Forms\UserControls\BusinessClubActivityControl.ascx" />
+    <Content Include="Forms\UserControls\BusinessClubActivityListControl.ascx" />
+    <Content Include="Forms\UserControls\BusinessClubActivityListUpdate.ascx" />
+    <Content Include="Forms\UserControls\BusinessClubControl.ascx" />
+    <Content Include="Forms\UserControls\BusinessClubMessageControl.ascx" />
+    <Content Include="Forms\UserControls\BusinessClubNEWSControl.ascx" />
+    <Content Include="Forms\UserControls\BusinessClubNewsDisplayControl.ascx" />
+    <Content Include="Forms\UserControls\BusinessClubUpdatedControl.ascx" />
+    <Content Include="Forms\UserControls\BusinessClubViewControl.ascx" />
+    <Content Include="Forms\UserControls\CandidateSearchControl.ascx" />
+    <Content Include="Forms\UserControls\CompanyAboutUsControl.ascx" />
+    <Content Include="Forms\UserControls\EmployeerCompanyInfo.ascx" />
+    <Content Include="Forms\UserControls\EmployeerHomeController.ascx" />
+    <Content Include="Forms\UserControls\EmployeerJobSearch.ascx" />
+    <Content Include="Forms\UserControls\JobNewsControl.ascx" />
+    <Content Include="Forms\UserControls\JobSearchControl.ascx" />
+    <Content Include="Forms\UserControls\PersonalInformationForCVControl.ascx" />
+    <Content Include="Forms\UserControls\VacancyApplicantList.ascx" />
+    <Content Include="Forms\UserControls\VacancyControl.ascx" />
+    <Content Include="Forms\UserControls\VacancyDetailControl.ascx" />
+    <Content Include="Images\Icon\add.png" />
+    <Content Include="Images\Icon\BusinessClub.jpg" />
+    <Content Include="Images\Icon\Cancel.png" />
+    <Content Include="Images\Icon\certificate.png" />
+    <Content Include="Images\Icon\CV.jpg" />
+    <Content Include="Images\Icon\delete.png" />
+    <Content Include="Images\Icon\edit.png" />
+    <Content Include="Images\Icon\event.png" />
+    <Content Include="Images\Icon\Female.png" />
+    <Content Include="Images\Icon\Join.png" />
+    <Content Include="Images\Icon\Male.png" />
+    <Content Include="Images\Icon\MessageBox.jpg" />
+    <Content Include="Images\Icon\Search.ico" />
+    <Content Include="Images\Icon\Search.png" />
+    <Content Include="Images\Icon\Update.png" />
+    <Content Include="Images\Icon\Update2.png" />
+    <Content Include="Images\Icon\view.png" />
+    <Content Include="Images\url.png" />
+    <Content Include="index.aspx" />
+    <Content Include="Forms\PersonalInformation.aspx" />
+    <Content Include="Forms\profileMgmt.aspx" />
+    <Content Include="Forms\profileUpload.aspx" />
+    <Content Include="Forms\QualificationMgmt.aspx" />
+    <Content Include="Forms\Test1.aspx" />
+    <Content Include="Forms\UserCommencement.aspx" />
+    <Content Include="Forms\UserControls\AdditionalSkillControl.ascx" />
+    <Content Include="Forms\UserControls\CurriculamVitaeControl.ascx" />
+    <Content Include="Forms\UserControls\DocumentListDisplayControl.ascx" />
+    <Content Include="Forms\UserControls\DocumentUploadControl.ascx" />
+    <Content Include="Forms\UserControls\PersonalInformationControl.ascx" />
+    <Content Include="Forms\UserControls\UserCommencementControl.ascx" />
+    <Content Include="Forms\UserControls\UserHobbyControl.ascx" />
+    <Content Include="Forms\UserControls\UserLanguageControl.ascx" />
+    <Content Include="Forms\UserControls\UserQualificationControl.ascx" />
+    <Content Include="Forms\UserControls\UserReferenceControl.ascx" />
+    <Content Include="Forms\UserControls\WorkExperienceControl.ascx" />
+    <Content Include="Forms\UserHobbyMgmt.aspx" />
+    <Content Include="Forms\UserLanguageMgmt.aspx" />
+    <Content Include="Forms\UserReferenceMgmt.aspx" />
+    <Content Include="Forms\UserSkillMgmt.aspx" />
+    <Content Include="Forms\UserWorkExperienceMgmt.aspx" />
+    <Content Include="Forms\WebForm1.aspx" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\css\bootstrap-grid.css" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\css\bootstrap-grid.min.css" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\css\bootstrap-reboot.css" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\css\bootstrap-reboot.min.css" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\css\bootstrap.css" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\css\bootstrap.min.css" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\js\bootstrap.js" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\js\bootstrap.min.js" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1.custom.zip" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\AUTHORS.txt" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\external\jquery\jquery.js" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-bg_glass_75_d0e5f5_1x400.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-bg_glass_85_dfeffc_1x400.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-bg_gloss-wave_55_5c9ccc_500x100.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-bg_inset-hard_100_f5f8f9_1x100.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-bg_inset-hard_100_fcfdfd_1x100.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-icons_217bc0_256x240.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-icons_469bdd_256x240.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-icons_6da8d5_256x240.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\images\ui-icons_f9bd01_256x240.png" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\index.html" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\jquery-ui.css" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\jquery-ui.js" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\jquery-ui.min.css" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\jquery-ui.min.js" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\jquery-ui.structure.css" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\jquery-ui.structure.min.css" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\jquery-ui.theme.css" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\jquery-ui.theme.min.css" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\LICENSE.txt" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1\package.json" />
+    <Content Include="Framework\JS\bubu.js" />
+    <Content Include="Framework\JS\Login.js" />
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Default.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Login.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="Forms\Emp_Master.Master" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist.zip" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\css\bootstrap-grid.css.map" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\css\bootstrap-grid.min.css.map" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\css\bootstrap-reboot.css.map" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\css\bootstrap.css.map" />
+    <Content Include="Framework\BootStrap\bootstrap-4.0.0-alpha.6-dist\css\bootstrap.min.css.map" />
+    <Content Include="Framework\JQuery\jquery-ui-1.12.1.zip" />
+    <Content Include="Forms\Employeer\Employeer_Master.Master" />
+    <Content Include="WebForm1.aspx" />
+    <None Include="Properties\PublishProfiles\BUBU.pubxml" />
+    <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.8.2.js" />
+    <Content Include="Scripts\jquery-1.8.2.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.js" />
+    <Content Include="Scripts\jquery-ui-1.8.24.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Style\bubu.css" />
+    <Content Include="Style\Login.css" />
+    <Content Include="Test2.aspx" />
+    <Content Include="TODO.txt" />
+    <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Bundle.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Scripts\_references.js" />
+    <Content Include="Site.Mobile.Master" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Class\EmailUtility.cs" />
+    <Compile Include="App_Class\HelperFunction.cs" />
+    <Compile Include="App_Class\MiscellaneousOperation.cs" />
+    <Compile Include="App_Class\MisOp.cs" />
+    <Compile Include="App_Class\SessionHelper.cs" />
+    <Compile Include="App_Class\vacancyDetail.cs" />
+    <Compile Include="App_GlobalResources\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource.En.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.En.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_GlobalResources\Resource.Fr.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.Fr.resx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="About.aspx.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="About.aspx.designer.cs">
+      <DependentUpon>About.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Class\Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Class\Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Class\Account\Manage.aspx.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Class\Account\Manage.aspx.designer.cs">
+      <DependentUpon>Manage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Class\Account\OpenAuthProviders.ascx.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Class\Account\OpenAuthProviders.ascx.designer.cs">
+      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Class\Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Class\Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Class\Account\RegisterExternalLogin.aspx.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Class\Account\RegisterExternalLogin.aspx.designer.cs">
+      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Contact.aspx.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contact.aspx.designer.cs">
+      <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EmployeeSignUp.aspx.cs">
+      <DependentUpon>EmployeeSignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EmployeeSignUp.aspx.designer.cs">
+      <DependentUpon>EmployeeSignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AccountActivate.aspx.cs">
+      <DependentUpon>AccountActivate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AccountActivate.aspx.designer.cs">
+      <DependentUpon>AccountActivate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddBusinessClub.aspx.cs">
+      <DependentUpon>AddBusinessClub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddBusinessClub.aspx.designer.cs">
+      <DependentUpon>AddBusinessClub.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddBusinessClubDetail.aspx.cs">
+      <DependentUpon>AddBusinessClubDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddBusinessClubDetail.aspx.designer.cs">
+      <DependentUpon>AddBusinessClubDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddBusinessClubEvent.aspx.cs">
+      <DependentUpon>AddBusinessClubEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddBusinessClubEvent.aspx.designer.cs">
+      <DependentUpon>AddBusinessClubEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BubuBasePage.cs">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Business.aspx.cs">
+      <DependentUpon>Business.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Business.aspx.designer.cs">
+      <DependentUpon>Business.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BusinessClubDetail.aspx.cs">
+      <DependentUpon>BusinessClubDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\BusinessClubDetail.aspx.designer.cs">
+      <DependentUpon>BusinessClubDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BusinessClubEvent.aspx.cs">
+      <DependentUpon>BusinessClubEvent.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\BusinessClubEvent.aspx.designer.cs">
+      <DependentUpon>BusinessClubEvent.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BusinessClubMgmt.aspx.cs">
+      <DependentUpon>BusinessClubMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\BusinessClubMgmt.aspx.designer.cs">
+      <DependentUpon>BusinessClubMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CompanyInfo.aspx.cs">
+      <DependentUpon>CompanyInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CompanyInfo.aspx.designer.cs">
+      <DependentUpon>CompanyInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CreateMessage.aspx.cs">
+      <DependentUpon>CreateMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CreateMessage.aspx.designer.cs">
+      <DependentUpon>CreateMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CurriculumVitae.aspx.cs">
+      <DependentUpon>CurriculumVitae.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CurriculumVitae.aspx.designer.cs">
+      <DependentUpon>CurriculumVitae.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\DocumentUploadMgmt.aspx.cs">
+      <DependentUpon>DocumentUploadMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\DocumentUploadMgmt.aspx.designer.cs">
+      <DependentUpon>DocumentUploadMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeHome.aspx.cs">
+      <DependentUpon>EmployeeHome.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeHome.aspx.designer.cs">
+      <DependentUpon>EmployeeHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeMessageMgmt.aspx.cs">
+      <DependentUpon>EmployeeMessageMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeMessageMgmt.aspx.designer.cs">
+      <DependentUpon>EmployeeMessageMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EmployeeNewsInfo.aspx.cs">
+      <DependentUpon>EmployeeNewsInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\EmployeeNewsInfo.aspx.designer.cs">
+      <DependentUpon>EmployeeNewsInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\CertificateMgmt.aspx.cs">
+      <DependentUpon>CertificateMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\CertificateMgmt.aspx.designer.cs">
+      <DependentUpon>CertificateMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\CompanyInformationEdit.aspx.cs">
+      <DependentUpon>CompanyInformationEdit.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\CompanyInformationEdit.aspx.designer.cs">
+      <DependentUpon>CompanyInformationEdit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\CreateMessage.aspx.cs">
+      <DependentUpon>CreateMessage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\CreateMessage.aspx.designer.cs">
+      <DependentUpon>CreateMessage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\CVmgmt.aspx.cs">
+      <DependentUpon>CVmgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\CVmgmt.aspx.designer.cs">
+      <DependentUpon>CVmgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\EmployeerAboutUs.aspx.cs">
+      <DependentUpon>EmployeerAboutUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\EmployeerAboutUs.aspx.designer.cs">
+      <DependentUpon>EmployeerAboutUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\EmployeerAboutUsMgmt.aspx.cs">
+      <DependentUpon>EmployeerAboutUsMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\EmployeerAboutUsMgmt.aspx.designer.cs">
+      <DependentUpon>EmployeerAboutUsMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\EmployeerVacancyMgmt.aspx.cs">
+      <DependentUpon>EmployeerVacancyMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\EmployeerVacancyMgmt.aspx.designer.cs">
+      <DependentUpon>EmployeerVacancyMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\Employeer_Master.Master.cs">
+      <DependentUpon>Employeer_Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\Employeer_Master.Master.designer.cs">
+      <DependentUpon>Employeer_Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\EmployerMessageMgmt.aspx.cs">
+      <DependentUpon>EmployerMessageMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\EmployerMessageMgmt.aspx.designer.cs">
+      <DependentUpon>EmployerMessageMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\EmployerNEWSMgmt.aspx.cs">
+      <DependentUpon>EmployerNEWSMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\EmployerNEWSMgmt.aspx.designer.cs">
+      <DependentUpon>EmployerNEWSMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\HomeEmployeer.aspx.cs">
+      <DependentUpon>HomeEmployeer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\HomeEmployeer.aspx.designer.cs">
+      <DependentUpon>HomeEmployeer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\VacancyApplicant.aspx.cs">
+      <DependentUpon>VacancyApplicant.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\VacancyApplicant.aspx.designer.cs">
+      <DependentUpon>VacancyApplicant.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\VacancyContactCandidate.aspx.cs">
+      <DependentUpon>VacancyContactCandidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\VacancyContactCandidate.aspx.designer.cs">
+      <DependentUpon>VacancyContactCandidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Employeer\VacancySearchCandidate.aspx.cs">
+      <DependentUpon>VacancySearchCandidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Employeer\VacancySearchCandidate.aspx.designer.cs">
+      <DependentUpon>VacancySearchCandidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Emp_Master.Master.cs">
+      <DependentUpon>Emp_Master.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Emp_Master.Master.designer.cs">
+      <DependentUpon>Emp_Master.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JobDetail.aspx.cs">
+      <DependentUpon>JobDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JobDetail.aspx.designer.cs">
+      <DependentUpon>JobDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\JobSearch.aspx.cs">
+      <DependentUpon>JobSearch.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\JobSearch.aspx.designer.cs">
+      <DependentUpon>JobSearch.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\AddBusinessClubRequest.ascx.cs">
+      <DependentUpon>AddBusinessClubRequest.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\AddBusinessClubRequest.ascx.designer.cs">
+      <DependentUpon>AddBusinessClubRequest.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubActivityControl.ascx.cs">
+      <DependentUpon>BusinessClubActivityControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubActivityControl.ascx.designer.cs">
+      <DependentUpon>BusinessClubActivityControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubActivityListControl.ascx.cs">
+      <DependentUpon>BusinessClubActivityListControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubActivityListControl.ascx.designer.cs">
+      <DependentUpon>BusinessClubActivityListControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubActivityListUpdate.ascx.cs">
+      <DependentUpon>BusinessClubActivityListUpdate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubActivityListUpdate.ascx.designer.cs">
+      <DependentUpon>BusinessClubActivityListUpdate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubControl.ascx.cs">
+      <DependentUpon>BusinessClubControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubControl.ascx.designer.cs">
+      <DependentUpon>BusinessClubControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubMessageControl.ascx.cs">
+      <DependentUpon>BusinessClubMessageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubMessageControl.ascx.designer.cs">
+      <DependentUpon>BusinessClubMessageControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubNEWSControl.ascx.cs">
+      <DependentUpon>BusinessClubNEWSControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubNEWSControl.ascx.designer.cs">
+      <DependentUpon>BusinessClubNEWSControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubNewsDisplayControl.ascx.cs">
+      <DependentUpon>BusinessClubNewsDisplayControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubNewsDisplayControl.ascx.designer.cs">
+      <DependentUpon>BusinessClubNewsDisplayControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubUpdatedControl.ascx.cs">
+      <DependentUpon>BusinessClubUpdatedControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubUpdatedControl.ascx.designer.cs">
+      <DependentUpon>BusinessClubUpdatedControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubViewControl.ascx.cs">
+      <DependentUpon>BusinessClubViewControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\BusinessClubViewControl.ascx.designer.cs">
+      <DependentUpon>BusinessClubViewControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\CandidateSearchControl.ascx.cs">
+      <DependentUpon>CandidateSearchControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\CandidateSearchControl.ascx.designer.cs">
+      <DependentUpon>CandidateSearchControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\CompanyAboutUsControl.ascx.cs">
+      <DependentUpon>CompanyAboutUsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\CompanyAboutUsControl.ascx.designer.cs">
+      <DependentUpon>CompanyAboutUsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\EmployeerCompanyInfo.ascx.cs">
+      <DependentUpon>EmployeerCompanyInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\EmployeerCompanyInfo.ascx.designer.cs">
+      <DependentUpon>EmployeerCompanyInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\EmployeerHomeController.ascx.cs">
+      <DependentUpon>EmployeerHomeController.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\EmployeerHomeController.ascx.designer.cs">
+      <DependentUpon>EmployeerHomeController.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\EmployeerJobSearch.ascx.cs">
+      <DependentUpon>EmployeerJobSearch.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\EmployeerJobSearch.ascx.designer.cs">
+      <DependentUpon>EmployeerJobSearch.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\JobNewsControl.ascx.cs">
+      <DependentUpon>JobNewsControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\JobNewsControl.ascx.designer.cs">
+      <DependentUpon>JobNewsControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\JobSearchControl.ascx.cs">
+      <DependentUpon>JobSearchControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\JobSearchControl.ascx.designer.cs">
+      <DependentUpon>JobSearchControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\PersonalInformationForCVControl.ascx.cs">
+      <DependentUpon>PersonalInformationForCVControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\PersonalInformationForCVControl.ascx.designer.cs">
+      <DependentUpon>PersonalInformationForCVControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\VacancyApplicantList.ascx.cs">
+      <DependentUpon>VacancyApplicantList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\VacancyApplicantList.ascx.designer.cs">
+      <DependentUpon>VacancyApplicantList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\VacancyControl.ascx.cs">
+      <DependentUpon>VacancyControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\VacancyControl.ascx.designer.cs">
+      <DependentUpon>VacancyControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\VacancyDetailControl.ascx.cs">
+      <DependentUpon>VacancyDetailControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\VacancyDetailControl.ascx.designer.cs">
+      <DependentUpon>VacancyDetailControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PersonalInformation.aspx.cs">
+      <DependentUpon>PersonalInformation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PersonalInformation.aspx.designer.cs">
+      <DependentUpon>PersonalInformation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\profileMgmt.aspx.cs">
+      <DependentUpon>profileMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\profileMgmt.aspx.designer.cs">
+      <DependentUpon>profileMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\profileUpload.aspx.cs">
+      <DependentUpon>profileUpload.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\profileUpload.aspx.designer.cs">
+      <DependentUpon>profileUpload.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QualificationMgmt.aspx.cs">
+      <DependentUpon>QualificationMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\QualificationMgmt.aspx.designer.cs">
+      <DependentUpon>QualificationMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Test1.aspx.cs">
+      <DependentUpon>Test1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Test1.aspx.designer.cs">
+      <DependentUpon>Test1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserCommencement.aspx.cs">
+      <DependentUpon>UserCommencement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserCommencement.aspx.designer.cs">
+      <DependentUpon>UserCommencement.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\AdditionalSkillControl.ascx.cs">
+      <DependentUpon>AdditionalSkillControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\AdditionalSkillControl.ascx.designer.cs">
+      <DependentUpon>AdditionalSkillControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\CurriculamVitaeControl.ascx.cs">
+      <DependentUpon>CurriculamVitaeControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\CurriculamVitaeControl.ascx.designer.cs">
+      <DependentUpon>CurriculamVitaeControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\DocumentListDisplayControl.ascx.cs">
+      <DependentUpon>DocumentListDisplayControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\DocumentListDisplayControl.ascx.designer.cs">
+      <DependentUpon>DocumentListDisplayControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\DocumentUploadControl.ascx.cs">
+      <DependentUpon>DocumentUploadControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\DocumentUploadControl.ascx.designer.cs">
+      <DependentUpon>DocumentUploadControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\PersonalInformationControl.ascx.cs">
+      <DependentUpon>PersonalInformationControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\PersonalInformationControl.ascx.designer.cs">
+      <DependentUpon>PersonalInformationControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\UserCommencementControl.ascx.cs">
+      <DependentUpon>UserCommencementControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\UserCommencementControl.ascx.designer.cs">
+      <DependentUpon>UserCommencementControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\UserHobbyControl.ascx.cs">
+      <DependentUpon>UserHobbyControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\UserHobbyControl.ascx.designer.cs">
+      <DependentUpon>UserHobbyControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\UserLanguageControl.ascx.cs">
+      <DependentUpon>UserLanguageControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\UserLanguageControl.ascx.designer.cs">
+      <DependentUpon>UserLanguageControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\UserQualificationControl.ascx.cs">
+      <DependentUpon>UserQualificationControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\UserQualificationControl.ascx.designer.cs">
+      <DependentUpon>UserQualificationControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\UserReferenceControl.ascx.cs">
+      <DependentUpon>UserReferenceControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\UserReferenceControl.ascx.designer.cs">
+      <DependentUpon>UserReferenceControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserControls\WorkExperienceControl.ascx.cs">
+      <DependentUpon>WorkExperienceControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserControls\WorkExperienceControl.ascx.designer.cs">
+      <DependentUpon>WorkExperienceControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserHobbyMgmt.aspx.cs">
+      <DependentUpon>UserHobbyMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserHobbyMgmt.aspx.designer.cs">
+      <DependentUpon>UserHobbyMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserLanguageMgmt.aspx.cs">
+      <DependentUpon>UserLanguageMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserLanguageMgmt.aspx.designer.cs">
+      <DependentUpon>UserLanguageMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserReferenceMgmt.aspx.cs">
+      <DependentUpon>UserReferenceMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserReferenceMgmt.aspx.designer.cs">
+      <DependentUpon>UserReferenceMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserSkillMgmt.aspx.cs">
+      <DependentUpon>UserSkillMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserSkillMgmt.aspx.designer.cs">
+      <DependentUpon>UserSkillMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserWorkExperienceMgmt.aspx.cs">
+      <DependentUpon>UserWorkExperienceMgmt.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserWorkExperienceMgmt.aspx.designer.cs">
+      <DependentUpon>UserWorkExperienceMgmt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Mobile.Master.designer.cs">
+      <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Test2.aspx.cs">
+      <DependentUpon>Test2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Test2.aspx.designer.cs">
+      <DependentUpon>Test2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewSwitcher.ascx.designer.cs">
+      <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="bin\" />
+    <Folder Include="Images\documentLogo\" />
+    <Folder Include="TPDLL\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Class\Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppController\AppController.csproj">
+      <Project>{0862d86b-58a5-482f-890b-4966ce604d1a}</Project>
+      <Name>AppController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAOClassLib\DAOClassLib.csproj">
+      <Project>{75d9fdae-c627-4554-b610-8fdc04a3c164}</Project>
+      <Name>DAOClassLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.Fr.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.Fr.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_GlobalResources\Resource.En.resx">
+      <Generator>GlobalResourceProxyGenerator</Generator>
+      <LastGenOutput>Resource.En.designer.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50894</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50894/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,1247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BubuModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AccountActivation">
+    <Key>
+      <PropertyRef Name="ActivationId" />
+    </Key>
+    <Property Name="ActivationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ActivationCode" Type="varchar" MaxLength="50" />
+    <Property Name="Userid" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsCompleted" Type="bit" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AccountType">
+    <Key>
+      <PropertyRef Name="AccountTypeId" />
+    </Key>
+    <Property Name="AccountTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AccountTitle" Type="varchar" MaxLength="50" />
+    <Property Name="AccountDescription" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="BusienssClubNewsInfo">
+    <Key>
+      <PropertyRef Name="BusinessClubNewsInfoId" />
+    </Key>
+    <Property Name="BusinessClubNewsInfoId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NewsTitle" Type="varchar" MaxLength="50" />
+    <Property Name="NewsDetail" Type="varchar" MaxLength="501" />
+    <Property Name="BusinessClubId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BusinessActivityMessageType">
+    <Key>
+      <PropertyRef Name="BusinessActivityMessageTypeId" />
+    </Key>
+    <Property Name="BusinessActivityMessageTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BusinessActivityMessageTypeName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BusinessClub">
+    <Key>
+      <PropertyRef Name="BusinessClubId" />
+    </Key>
+    <Property Name="BusinessClubId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BusinessClubName" Type="varchar" MaxLength="100" />
+    <Property Name="Purpose" Type="varchar" MaxLength="150" />
+    <Property Name="About" Type="varchar" MaxLength="250" />
+    <Property Name="ContentType" Type="varchar" MaxLength="50" />
+    <Property Name="ContentData" Type="varbinary(max)" />
+    <Property Name="format" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="UserCreatedId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BusinessClubActivity">
+    <Key>
+      <PropertyRef Name="BusinesClubActivityId" />
+    </Key>
+    <Property Name="BusinesClubActivityId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MessageDetail" Type="varchar" MaxLength="250" />
+    <Property Name="BusinessClubMessageTypeId" Type="int" Nullable="false" />
+    <Property Name="Subject" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="BusinessClubId" Type="int" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="ActivityDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="BusinessClubActivityComment">
+    <Key>
+      <PropertyRef Name="BusinessClubActivityCommentId" />
+    </Key>
+    <Property Name="BusinessClubActivityCommentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BusinessClubActivityId" Type="int" />
+    <Property Name="Message" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="int" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BusinessClubMember">
+    <Key>
+      <PropertyRef Name="BusinessClubMemberId" />
+    </Key>
+    <Property Name="BusinessClubMemberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MemberId" Type="int" Nullable="false" />
+    <Property Name="BusinessClubId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Commencement">
+    <Key>
+      <PropertyRef Name="CommencementId" />
+    </Key>
+    <Property Name="CommencementId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CommencementDescription" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CompanyAbout">
+    <Key>
+      <PropertyRef Name="CompanyAboutUsId" />
+    </Key>
+    <Property Name="CompanyAboutUsId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyId" Type="int" Nullable="false" />
+    <Property Name="Heading" Type="varchar" MaxLength="100" />
+    <Property Name="Detail" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CompanyInformation">
+    <Key>
+      <PropertyRef Name="CompanyId" />
+    </Key>
+    <Property Name="CompanyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="100" />
+    <Property Name="CompanySector" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyContentType" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyContentData" Type="varbinary(max)" />
+    <Property Name="Companyformat" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyAddress" Type="varchar" MaxLength="100" />
+    <Property Name="CompanyContactNumber" Type="varchar" MaxLength="50" />
+    <Property Name="fileName" Type="varchar" MaxLength="50" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryId" />
+    </Key>
+    <Property Name="CountryId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CountryName" Type="varchar" MaxLength="50" />
+    <Property Name="VersionNo" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentCategory">
+    <Key>
+      <PropertyRef Name="DocumentCategoryid" />
+    </Key>
+    <Property Name="DocumentCategoryid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentCategoryName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentFormatAllow">
+    <Key>
+      <PropertyRef Name="DocumentFormatAllowId" />
+    </Key>
+    <Property Name="DocumentFormatAllowId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentCategoryId" Type="int" Nullable="false" />
+    <Property Name="DocumentFormat" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="DocumentUpload">
+    <Key>
+      <PropertyRef Name="UploadDocumentId" />
+    </Key>
+    <Property Name="UploadDocumentId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Userid" Type="int" />
+    <Property Name="DocumentCategoryid" Type="int" />
+    <Property Name="ContentType" Type="varchar" MaxLength="50" />
+    <Property Name="ContentData" Type="varbinary(max)" />
+    <Property Name="format" Type="varchar" MaxLength="50" />
+    <Property Name="fileName" Type="varchar" MaxLength="100" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Domicile">
+    <Key>
+      <PropertyRef Name="DomicileId" />
+    </Key>
+    <Property Name="DomicileId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DomicileName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsCompleted" Type="bit" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmploymentType">
+    <Key>
+      <PropertyRef Name="EmploymentTypeId" />
+    </Key>
+    <Property Name="EmploymentTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EmploymentTypeName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="formatAllow_old">
+    <Key>
+      <PropertyRef Name="formatId" />
+    </Key>
+    <Property Name="formatId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="formatType" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="forProfilePic" Type="bit" Nullable="false" />
+    <Property Name="forDocument" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="isActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Hobby">
+    <Key>
+      <PropertyRef Name="HobbyId" />
+    </Key>
+    <Property Name="HobbyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="HobbyName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobType">
+    <Key>
+      <PropertyRef Name="JobTypeId" />
+    </Key>
+    <Property Name="JobTypeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="JobTypeName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="JobTypeDetail" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Language">
+    <Key>
+      <PropertyRef Name="LanguageId" />
+    </Key>
+    <Property Name="LanguageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LanguageName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Level">
+    <Key>
+      <PropertyRef Name="LevelId" />
+    </Key>
+    <Property Name="LevelId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LevelName" Type="varchar" MaxLength="50" />
+    <Property Name="LevelCode" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="Qualification">
+    <Key>
+      <PropertyRef Name="QualificationId" />
+    </Key>
+    <Property Name="QualificationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="QualificationName" Type="varchar" MaxLength="50" />
+    <Property Name="QualificationLevel" Type="int" />
+    <Property Name="VersionNo" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Reference">
+    <Key>
+      <PropertyRef Name="ReferenceId" />
+    </Key>
+    <Property Name="ReferenceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReferenceName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="RegionId" />
+    </Key>
+    <Property Name="RegionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="RegionName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+  </EntityType>
+  <EntityType Name="Skill">
+    <Key>
+      <PropertyRef Name="SkillId" />
+    </Key>
+    <Property Name="SkillId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SkillName" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Userid" />
+    </Key>
+    <Property Name="Userid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserName" Type="varchar" MaxLength="50" />
+    <Property Name="UserPassword" Type="nvarchar" MaxLength="50" />
+    <Property Name="AccountTypeId" Type="int" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="MiddleName" Type="varchar" MaxLength="50" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" />
+    <Property Name="DateOfBirth" Type="datetime" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="ContactNumber" Type="varchar" MaxLength="50" />
+    <Property Name="VersionNo" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="AccountStatus" Type="int" />
+    <Property Name="ContentType" Type="varchar" MaxLength="50" />
+    <Property Name="ContentData" Type="varbinary(max)" />
+    <Property Name="format" Type="varchar" MaxLength="50" />
+    <Property Name="ProfileEmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="UserDomicile" Type="varchar" MaxLength="50" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="IsMarried" Type="bit" Nullable="false" />
+    <Property Name="Gender" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="CommencementID" Type="int" />
+    <Property Name="DomicileId" Type="int" />
+    <Property Name="ProfileURL" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UserHobby">
+    <Key>
+      <PropertyRef Name="UserHobbyId" />
+    </Key>
+    <Property Name="UserHobbyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="HobbyId" Type="int" Nullable="false" />
+    <Property Name="HobbyDetail" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserInbox">
+    <Key>
+      <PropertyRef Name="UserInboxId" />
+    </Key>
+    <Property Name="UserInboxId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InboxUserId" Type="int" />
+    <Property Name="SenderId" Type="int" />
+    <Property Name="VacancyId" Type="int" />
+    <Property Name="Message" Type="varchar" MaxLength="251" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserLanguage">
+    <Key>
+      <PropertyRef Name="UserLanguageId" />
+    </Key>
+    <Property Name="UserLanguageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="LanguageId" Type="int" Nullable="false" />
+    <Property Name="LevelId" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserQualification">
+    <Key>
+      <PropertyRef Name="UserQualificationId" />
+    </Key>
+    <Property Name="UserQualificationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="QualificationId" Type="int" />
+    <Property Name="CompletedYear" Type="int" />
+    <Property Name="CountryId" Type="int" />
+    <Property Name="Description" Type="varchar" MaxLength="100" />
+    <Property Name="Institution" Type="varchar" MaxLength="150" />
+    <Property Name="Percentage" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="CGPA" Type="numeric" Precision="18" Scale="2" />
+    <Property Name="VersionNo" Type="timestamp" StoreGeneratedPattern="Computed" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="IsCompleted" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserReference">
+    <Key>
+      <PropertyRef Name="UserReferenceId" />
+    </Key>
+    <Property Name="UserReferenceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="ReferenceId" Type="int" Nullable="false" />
+    <Property Name="ReferenceName" Type="varchar" MaxLength="50" />
+    <Property Name="ReferenceContactNo" Type="varchar" MaxLength="50" />
+    <Property Name="ReferenceCompany" Type="varchar" MaxLength="100" />
+    <Property Name="ReferencePosition" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserSkill">
+    <Key>
+      <PropertyRef Name="UserSkillId" />
+    </Key>
+    <Property Name="UserSkillId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="SkillId" Type="int" Nullable="false" />
+    <Property Name="SkillDetail" Type="varchar" MaxLength="100" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UserWorkExperience">
+    <Key>
+      <PropertyRef Name="UserWorkExperienceid" />
+    </Key>
+    <Property Name="UserWorkExperienceid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="Company" Type="varchar" MaxLength="100" />
+    <Property Name="JobFunction" Type="varchar" MaxLength="100" />
+    <Property Name="Position" Type="varchar" MaxLength="100" />
+    <Property Name="JobLocation" Type="varchar" MaxLength="150" />
+    <Property Name="Description" Type="varchar" MaxLength="150" />
+    <Property Name="Institution" Type="varchar" MaxLength="50" />
+    <Property Name="JobFrom" Type="datetime" Nullable="false" />
+    <Property Name="JobTo" Type="datetime" />
+    <Property Name="IsCurrentJob" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Vacancy">
+    <Key>
+      <PropertyRef Name="VacancyId" />
+    </Key>
+    <Property Name="VacancyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyId" Type="int" Nullable="false" />
+    <Property Name="IsPrivate" Type="bit" Nullable="false" />
+    <Property Name="JobTitle" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="JobFunction" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="JobDetail" Type="varchar" MaxLength="50" />
+    <Property Name="JobTypeId" Type="int" Nullable="false" />
+    <Property Name="IsVacancyCompleted" Type="bit" Nullable="false" />
+    <Property Name="CompletedRemark" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+    <Property Name="RegionId" Type="int" />
+  </EntityType>
+  <EntityType Name="VacancyApply">
+    <Key>
+      <PropertyRef Name="VacancyApplyId" />
+    </Key>
+    <Property Name="VacancyApplyId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="VacancyId" Type="int" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="MotivationLetter" Type="varchar" MaxLength="150" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsCancelByEmployer" Type="bit" />
+  </EntityType>
+  <EntityType Name="WorkExperience">
+    <Key>
+      <PropertyRef Name="WorkExperienceId" />
+    </Key>
+    <Property Name="WorkExperienceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="WorkExperienceName" Type="varchar" MaxLength="50" />
+    <Property Name="DaysCount" Type="int" />
+    <Property Name="CreatedBy" Type="int" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="LastModifiedBy" Type="int" />
+    <Property Name="LastModifiedDate" Type="datetime" />
+    <Property Name="IsCompleted" Type="bit" />
+    <Property Name="IsActive" Type="bit" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_AccountActivation_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="AccountActivation" Type="Self.AccountActivation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="AccountActivation">
+        <PropertyRef Name="Userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusienssClubNews_BusinessClub">
+    <End Role="BusinessClub" Type="Self.BusinessClub" Multiplicity="1" />
+    <End Role="BusienssClubNewsInfo" Type="Self.BusienssClubNewsInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessClub">
+        <PropertyRef Name="BusinessClubId" />
+      </Principal>
+      <Dependent Role="BusienssClubNewsInfo">
+        <PropertyRef Name="BusinessClubId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusienssClubNews_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="BusienssClubNewsInfo" Type="Self.BusienssClubNewsInfo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="BusienssClubNewsInfo">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClub_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="BusinessClub" Type="Self.BusinessClub" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="BusinessClub">
+        <PropertyRef Name="UserCreatedId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubActivity_BusinessActivityMessageType">
+    <End Role="BusinessActivityMessageType" Type="Self.BusinessActivityMessageType" Multiplicity="1" />
+    <End Role="BusinessClubActivity" Type="Self.BusinessClubActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessActivityMessageType">
+        <PropertyRef Name="BusinessActivityMessageTypeId" />
+      </Principal>
+      <Dependent Role="BusinessClubActivity">
+        <PropertyRef Name="BusinessClubMessageTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubActivity_BusinessClub">
+    <End Role="BusinessClub" Type="Self.BusinessClub" Multiplicity="1" />
+    <End Role="BusinessClubActivity" Type="Self.BusinessClubActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessClub">
+        <PropertyRef Name="BusinessClubId" />
+      </Principal>
+      <Dependent Role="BusinessClubActivity">
+        <PropertyRef Name="BusinessClubId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubActivity_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="BusinessClubActivity" Type="Self.BusinessClubActivity" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="BusinessClubActivity">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubActivityComment_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="BusinessClubActivityComment" Type="Self.BusinessClubActivityComment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="BusinessClubActivityComment">
+        <PropertyRef Name="CreatedBy" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubMember_BusinessClub">
+    <End Role="BusinessClub" Type="Self.BusinessClub" Multiplicity="1" />
+    <End Role="BusinessClubMember" Type="Self.BusinessClubMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BusinessClub">
+        <PropertyRef Name="BusinessClubId" />
+      </Principal>
+      <Dependent Role="BusinessClubMember">
+        <PropertyRef Name="BusinessClubId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_BusinessClubMember_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="BusinessClubMember" Type="Self.BusinessClubMember" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="BusinessClubMember">
+        <PropertyRef Name="MemberId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyAboutUs_CompanyInformation">
+    <End Role="CompanyInformation" Type="Self.CompanyInformation" Multiplicity="1" />
+    <End Role="CompanyAbout" Type="Self.CompanyAbout" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompanyInformation">
+        <PropertyRef Name="CompanyId" />
+      </Principal>
+      <Dependent Role="CompanyAbout">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_CompanyInformation_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="CompanyInformation" Type="Self.CompanyInformation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="CompanyInformation">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentFormatAllow_DocumentCategory">
+    <End Role="DocumentCategory" Type="Self.DocumentCategory" Multiplicity="1" />
+    <End Role="DocumentFormatAllow" Type="Self.DocumentFormatAllow" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentCategory">
+        <PropertyRef Name="DocumentCategoryid" />
+      </Principal>
+      <Dependent Role="DocumentFormatAllow">
+        <PropertyRef Name="DocumentCategoryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentUpload_DocumentCategory">
+    <End Role="DocumentCategory" Type="Self.DocumentCategory" Multiplicity="0..1" />
+    <End Role="DocumentUpload" Type="Self.DocumentUpload" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DocumentCategory">
+        <PropertyRef Name="DocumentCategoryid" />
+      </Principal>
+      <Dependent Role="DocumentUpload">
+        <PropertyRef Name="DocumentCategoryid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_DocumentUpload_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="DocumentUpload" Type="Self.DocumentUpload" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="DocumentUpload">
+        <PropertyRef Name="Userid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_AccountType">
+    <End Role="AccountType" Type="Self.AccountType" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="AccountType">
+        <PropertyRef Name="AccountTypeId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="AccountTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Commencement">
+    <End Role="Commencement" Type="Self.Commencement" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Commencement">
+        <PropertyRef Name="CommencementId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="CommencementID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_User_Domicile">
+    <End Role="Domicile" Type="Self.Domicile" Multiplicity="0..1" />
+    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Domicile">
+        <PropertyRef Name="DomicileId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="DomicileId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserHobby_Hobby">
+    <End Role="Hobby" Type="Self.Hobby" Multiplicity="1" />
+    <End Role="UserHobby" Type="Self.UserHobby" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Hobby">
+        <PropertyRef Name="HobbyId" />
+      </Principal>
+      <Dependent Role="UserHobby">
+        <PropertyRef Name="HobbyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserHobby_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserHobby" Type="Self.UserHobby" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserHobby">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInbox_User">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="UserInbox" Type="Self.UserInbox" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserInbox">
+        <PropertyRef Name="InboxUserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInbox_User1">
+    <End Role="User" Type="Self.User" Multiplicity="0..1" />
+    <End Role="UserInbox" Type="Self.UserInbox" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserInbox">
+        <PropertyRef Name="SenderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserInbox_Vacancy">
+    <End Role="Vacancy" Type="Self.Vacancy" Multiplicity="0..1" />
+    <End Role="UserInbox" Type="Self.UserInbox" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vacancy">
+        <PropertyRef Name="VacancyId" />
+      </Principal>
+      <Dependent Role="UserInbox">
+        <PropertyRef Name="VacancyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLanguage_Language">
+    <End Role="Language" Type="Self.Language" Multiplicity="1" />
+    <End Role="UserLanguage" Type="Self.UserLanguage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Language">
+        <PropertyRef Name="LanguageId" />
+      </Principal>
+      <Dependent Role="UserLanguage">
+        <PropertyRef Name="LanguageId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLanguage_Level">
+    <End Role="Level" Type="Self.Level" Multiplicity="1" />
+    <End Role="UserLanguage" Type="Self.UserLanguage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Level">
+        <PropertyRef Name="LevelId" />
+      </Principal>
+      <Dependent Role="UserLanguage">
+        <PropertyRef Name="LevelId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserLanguage_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserLanguage" Type="Self.UserLanguage" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserLanguage">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserQualification_Country">
+    <End Role="Country" Type="Self.Country" Multiplicity="0..1" />
+    <End Role="UserQualification" Type="Self.UserQualification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryId" />
+      </Principal>
+      <Dependent Role="UserQualification">
+        <PropertyRef Name="CountryId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserQualification_Qualification">
+    <End Role="Qualification" Type="Self.Qualification" Multiplicity="0..1" />
+    <End Role="UserQualification" Type="Self.UserQualification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Qualification">
+        <PropertyRef Name="QualificationId" />
+      </Principal>
+      <Dependent Role="UserQualification">
+        <PropertyRef Name="QualificationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserQualification_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserQualification" Type="Self.UserQualification" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserQualification">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserReference_Reference">
+    <End Role="Reference" Type="Self.Reference" Multiplicity="1" />
+    <End Role="UserReference" Type="Self.UserReference" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Reference">
+        <PropertyRef Name="ReferenceId" />
+      </Principal>
+      <Dependent Role="UserReference">
+        <PropertyRef Name="ReferenceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserReference_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserReference" Type="Self.UserReference" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserReference">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSkill_Skill">
+    <End Role="Skill" Type="Self.Skill" Multiplicity="1" />
+    <End Role="UserSkill" Type="Self.UserSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Skill">
+        <PropertyRef Name="SkillId" />
+      </Principal>
+      <Dependent Role="UserSkill">
+        <PropertyRef Name="SkillId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UserSkill_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserSkill" Type="Self.UserSkill" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserSkill">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vacancy_CompanyInformation">
+    <End Role="CompanyInformation" Type="Self.CompanyInformation" Multiplicity="1" />
+    <End Role="Vacancy" Type="Self.Vacancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CompanyInformation">
+        <PropertyRef Name="CompanyId" />
+      </Principal>
+      <Dependent Role="Vacancy">
+        <PropertyRef Name="CompanyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vacancy_JobType">
+    <End Role="JobType" Type="Self.JobType" Multiplicity="1" />
+    <End Role="Vacancy" Type="Self.Vacancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobType">
+        <PropertyRef Name="JobTypeId" />
+      </Principal>
+      <Dependent Role="Vacancy">
+        <PropertyRef Name="JobTypeId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Vacancy_Region">
+    <End Role="Region" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="Vacancy" Type="Self.Vacancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="RegionId" />
+      </Principal>
+      <Dependent Role="Vacancy">
+        <PropertyRef Name="RegionId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VacancyApply_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="VacancyApply" Type="Self.VacancyApply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="VacancyApply">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_VacancyApply_Vacancy">
+    <End Role="Vacancy" Type="Self.Vacancy" Multiplicity="1" />
+    <End Role="VacancyApply" Type="Self.VacancyApply" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Vacancy">
+        <PropertyRef Name="VacancyId" />
+      </Principal>
+      <Dependent Role="VacancyApply">
+        <PropertyRef Name="VacancyId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_WorkExperience_User">
+    <End Role="User" Type="Self.User" Multiplicity="1" />
+    <End Role="UserWorkExperience" Type="Self.UserWorkExperience" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="User">
+        <PropertyRef Name="Userid" />
+      </Principal>
+      <Dependent Role="UserWorkExperience">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="BubuModelStoreContainer">
+    <EntitySet Name="AccountActivation" EntityType="Self.AccountActivation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="AccountType" EntityType="Self.AccountType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BusienssClubNewsInfo" EntityType="Self.BusienssClubNewsInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BusinessActivityMessageType" EntityType="Self.BusinessActivityMessageType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BusinessClub" EntityType="Self.BusinessClub" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BusinessClubActivity" EntityType="Self.BusinessClubActivity" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BusinessClubActivityComment" EntityType="Self.BusinessClubActivityComment" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BusinessClubMember" EntityType="Self.BusinessClubMember" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Commencement" EntityType="Self.Commencement" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyAbout" EntityType="Self.CompanyAbout" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyInformation" EntityType="Self.CompanyInformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Country" EntityType="Self.Country" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentCategory" EntityType="Self.DocumentCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentFormatAllow" EntityType="Self.DocumentFormatAllow" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DocumentUpload" EntityType="Self.DocumentUpload" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Domicile" EntityType="Self.Domicile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EmploymentType" EntityType="Self.EmploymentType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="formatAllow_old" EntityType="Self.formatAllow_old" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Hobby" EntityType="Self.Hobby" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="JobType" EntityType="Self.JobType" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Language" EntityType="Self.Language" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Level" EntityType="Self.Level" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Qualification" EntityType="Self.Qualification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Reference" EntityType="Self.Reference" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Region" EntityType="Self.Region" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Skill" EntityType="Self.Skill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserHobby" EntityType="Self.UserHobby" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserInbox" EntityType="Self.UserInbox" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserLanguage" EntityType="Self.UserLanguage" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserQualification" EntityType="Self.UserQualification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserReference" EntityType="Self.UserReference" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserSkill" EntityType="Self.UserSkill" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserWorkExperience" EntityType="Self.UserWorkExperience" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Vacancy" EntityType="Self.Vacancy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VacancyApply" EntityType="Self.VacancyApply" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="WorkExperience" EntityType="Self.WorkExperience" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_AccountActivation_User" Association="Self.FK_AccountActivation_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="AccountActivation" EntitySet="AccountActivation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusienssClubNews_BusinessClub" Association="Self.FK_BusienssClubNews_BusinessClub">
+      <End Role="BusinessClub" EntitySet="BusinessClub" />
+      <End Role="BusienssClubNewsInfo" EntitySet="BusienssClubNewsInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusienssClubNews_User" Association="Self.FK_BusienssClubNews_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="BusienssClubNewsInfo" EntitySet="BusienssClubNewsInfo" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClub_User" Association="Self.FK_BusinessClub_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="BusinessClub" EntitySet="BusinessClub" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubActivity_BusinessActivityMessageType" Association="Self.FK_BusinessClubActivity_BusinessActivityMessageType">
+      <End Role="BusinessActivityMessageType" EntitySet="BusinessActivityMessageType" />
+      <End Role="BusinessClubActivity" EntitySet="BusinessClubActivity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubActivity_BusinessClub" Association="Self.FK_BusinessClubActivity_BusinessClub">
+      <End Role="BusinessClub" EntitySet="BusinessClub" />
+      <End Role="BusinessClubActivity" EntitySet="BusinessClubActivity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubActivity_User" Association="Self.FK_BusinessClubActivity_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="BusinessClubActivity" EntitySet="BusinessClubActivity" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubActivityComment_User" Association="Self.FK_BusinessClubActivityComment_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="BusinessClubActivityComment" EntitySet="BusinessClubActivityComment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubMember_BusinessClub" Association="Self.FK_BusinessClubMember_BusinessClub">
+      <End Role="BusinessClub" EntitySet="BusinessClub" />
+      <End Role="BusinessClubMember" EntitySet="BusinessClubMember" />
+    </AssociationSet>
+    <AssociationSet Name="FK_BusinessClubMember_User" Association="Self.FK_BusinessClubMember_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="BusinessClubMember" EntitySet="BusinessClubMember" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyAboutUs_CompanyInformation" Association="Self.FK_CompanyAboutUs_CompanyInformation">
+      <End Role="CompanyInformation" EntitySet="CompanyInformation" />
+      <End Role="CompanyAbout" EntitySet="CompanyAbout" />
+    </AssociationSet>
+    <AssociationSet Name="FK_CompanyInformation_User" Association="Self.FK_CompanyInformation_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="CompanyInformation" EntitySet="CompanyInformation" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentFormatAllow_DocumentCategory" Association="Self.FK_DocumentFormatAllow_DocumentCategory">
+      <End Role="DocumentCategory" EntitySet="DocumentCategory" />
+      <End Role="DocumentFormatAllow" EntitySet="DocumentFormatAllow" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentUpload_DocumentCategory" Association="Self.FK_DocumentUpload_DocumentCategory">
+      <End Role="DocumentCategory" EntitySet="DocumentCategory" />
+      <End Role="DocumentUpload" EntitySet="DocumentUpload" />
+    </AssociationSet>
+    <AssociationSet Name="FK_DocumentUpload_User" Association="Self.FK_DocumentUpload_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="DocumentUpload" EntitySet="DocumentUpload" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_AccountType" Association="Self.FK_User_AccountType">
+      <End Role="AccountType" EntitySet="AccountType" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Commencement" Association="Self.FK_User_Commencement">
+      <End Role="Commencement" EntitySet="Commencement" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Country" Association="Self.FK_User_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Domicile" Association="Self.FK_User_Domicile">
+      <End Role="Domicile" EntitySet="Domicile" />
+      <End Role="User" EntitySet="User" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserHobby_Hobby" Association="Self.FK_UserHobby_Hobby">
+      <End Role="Hobby" EntitySet="Hobby" />
+      <End Role="UserHobby" EntitySet="UserHobby" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserHobby_User" Association="Self.FK_UserHobby_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserHobby" EntitySet="UserHobby" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInbox_User" Association="Self.FK_UserInbox_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserInbox" EntitySet="UserInbox" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInbox_User1" Association="Self.FK_UserInbox_User1">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserInbox" EntitySet="UserInbox" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserInbox_Vacancy" Association="Self.FK_UserInbox_Vacancy">
+      <End Role="Vacancy" EntitySet="Vacancy" />
+      <End Role="UserInbox" EntitySet="UserInbox" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLanguage_Language" Association="Self.FK_UserLanguage_Language">
+      <End Role="Language" EntitySet="Language" />
+      <End Role="UserLanguage" EntitySet="UserLanguage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLanguage_Level" Association="Self.FK_UserLanguage_Level">
+      <End Role="Level" EntitySet="Level" />
+      <End Role="UserLanguage" EntitySet="UserLanguage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserLanguage_User" Association="Self.FK_UserLanguage_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserLanguage" EntitySet="UserLanguage" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserQualification_Country" Association="Self.FK_UserQualification_Country">
+      <End Role="Country" EntitySet="Country" />
+      <End Role="UserQualification" EntitySet="UserQualification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserQualification_Qualification" Association="Self.FK_UserQualification_Qualification">
+      <End Role="Qualification" EntitySet="Qualification" />
+      <End Role="UserQualification" EntitySet="UserQualification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserQualification_User" Association="Self.FK_UserQualification_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserQualification" EntitySet="UserQualification" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserReference_Reference" Association="Self.FK_UserReference_Reference">
+      <End Role="Reference" EntitySet="Reference" />
+      <End Role="UserReference" EntitySet="UserReference" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserReference_User" Association="Self.FK_UserReference_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserReference" EntitySet="UserReference" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSkill_Skill" Association="Self.FK_UserSkill_Skill">
+      <End Role="Skill" EntitySet="Skill" />
+      <End Role="UserSkill" EntitySet="UserSkill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserSkill_User" Association="Self.FK_UserSkill_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserSkill" EntitySet="UserSkill" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vacancy_CompanyInformation" Association="Self.FK_Vacancy_CompanyInformation">
+      <End Role="CompanyInformation" EntitySet="CompanyInformation" />
+      <End Role="Vacancy" EntitySet="Vacancy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vacancy_JobType" Association="Self.FK_Vacancy_JobType">
+      <End Role="JobType" EntitySet="JobType" />
+      <End Role="Vacancy" EntitySet="Vacancy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Vacancy_Region" Association="Self.FK_Vacancy_Region">
+      <End Role="Region" EntitySet="Region" />
+      <End Role="Vacancy" EntitySet="Vacancy" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VacancyApply_User" Association="Self.FK_VacancyApply_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="VacancyApply" EntitySet="VacancyApply" />
+    </AssociationSet>
+    <AssociationSet Name="FK_VacancyApply_Vacancy" Association="Self.FK_VacancyApply_Vacancy">
+      <End Role="Vacancy" EntitySet="Vacancy" />
+      <End Role="VacancyApply" EntitySet="VacancyApply" />
+    </AssociationSet>
+    <AssociationSet Name="FK_WorkExperience_User" Association="Self.FK_WorkExperience_User">
+      <End Role="User" EntitySet="User" />
+      <End Role="UserWorkExperience" EntitySet="UserWorkExperience" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

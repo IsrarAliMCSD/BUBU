@@ -1,0 +1,20 @@
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAO\bin\Debug\DAO.dll.config
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAO\bin\Debug\DAO.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAO\bin\Debug\DAO.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAO\bin\Debug\DAOClassLib.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAO\bin\Debug\EntityFramework.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAO\bin\Debug\DAOClassLib.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAO\bin\Debug\EntityFramework.xml
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAO\obj\Debug\DAO.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DAO\obj\Debug\DAO.pdb
+D:\Personal\Rehan\BU\Bubu_WebApp\DAO\bin\Debug\DAO.dll.config
+D:\Personal\Rehan\BU\Bubu_WebApp\DAO\bin\Debug\DAO.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\DAO\bin\Debug\DAO.pdb
+D:\Personal\Rehan\BU\Bubu_WebApp\DAO\bin\Debug\DAOClassLib.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\DAO\bin\Debug\EntityFramework.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\DAO\bin\Debug\DAOClassLib.pdb
+D:\Personal\Rehan\BU\Bubu_WebApp\DAO\bin\Debug\EntityFramework.xml
+D:\Personal\Rehan\BU\Bubu_WebApp\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+D:\Personal\Rehan\BU\Bubu_WebApp\DAO\obj\Debug\DAO.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\DAO\obj\Debug\DAO.pdb

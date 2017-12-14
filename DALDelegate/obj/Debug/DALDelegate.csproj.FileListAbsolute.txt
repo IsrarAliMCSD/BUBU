@@ -1,0 +1,22 @@
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DALDelegate\bin\Debug\DALDelegate.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DALDelegate\bin\Debug\DALDelegate.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DALDelegate\bin\Debug\DAO.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DALDelegate\bin\Debug\DAOClassLib.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DALDelegate\bin\Debug\EntityFramework.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DALDelegate\bin\Debug\DAOClassLib.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DALDelegate\bin\Debug\DAO.pdb
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DALDelegate\bin\Debug\EntityFramework.xml
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DALDelegate\obj\Debug\DALDelegate.csprojResolveAssemblyReference.cache
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DALDelegate\obj\Debug\DALDelegate.dll
+C:\Users\israr.ali.SYSTEMS\Documents\Visual Studio 2013\Projects\Bubu_WebApp\DALDelegate\obj\Debug\DALDelegate.pdb
+D:\Personal\Rehan\BU\Bubu_WebApp\DALDelegate\bin\Debug\DALDelegate.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\DALDelegate\bin\Debug\DALDelegate.pdb
+D:\Personal\Rehan\BU\Bubu_WebApp\DALDelegate\bin\Debug\DAO.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\DALDelegate\bin\Debug\DAOClassLib.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\DALDelegate\bin\Debug\EntityFramework.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\DALDelegate\bin\Debug\DAOClassLib.pdb
+D:\Personal\Rehan\BU\Bubu_WebApp\DALDelegate\bin\Debug\DAO.pdb
+D:\Personal\Rehan\BU\Bubu_WebApp\DALDelegate\bin\Debug\EntityFramework.xml
+D:\Personal\Rehan\BU\Bubu_WebApp\DALDelegate\obj\Debug\DALDelegate.csprojResolveAssemblyReference.cache
+D:\Personal\Rehan\BU\Bubu_WebApp\DALDelegate\obj\Debug\DALDelegate.dll
+D:\Personal\Rehan\BU\Bubu_WebApp\DALDelegate\obj\Debug\DALDelegate.pdb
